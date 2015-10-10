@@ -3,6 +3,6 @@
 Article List
 ------------
 
-status | title (with link) | published date | filename
+status | title | published date | filename
 |---|---|---|---|
-|draft|dummy|N/A|TBC
+|draft|Why are Excel Workbooks difficult to follow and check?|N/A|why-are-workbooks-difficult-to-read.md
