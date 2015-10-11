@@ -41,7 +41,7 @@ Excel specifies a format used for data tables. Formula must be placed in the des
 
 VBA programs are the most horrible places having such problems. Many VBA programs are so poorly written that a) inserting/deleting rows and columns, or b) simply moving cells and renaming worksheets, make them failed. The below code snippet is an illustration – it contains the references “B6″,  “output” and “A10″. Whenever the cells `B6` and `A10` are moved, or the worksheet `output` is renamed or deleted, the snippet will fail.
 
-```
+```vb
 Public Sub testing()
   input_plancode = Range("B6").Value
   Worksheets("output").Range("A10").Value = input_plancode
