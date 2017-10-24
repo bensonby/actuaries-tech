@@ -1,0 +1,22 @@
+Compatibility and File Size
+Be friendly to other people using the file
+
+Excel 2007 creates the new file formats .xlsx and .xlsm. Users of Excel 2007 often save new files in this format. However it has to be seriously addressed that the new format is not backward compatible, i.e. old version of Excel cannot open these files.
+
+Therefore, I strongly encourage people not to save any file in .xlsx format, with the fact that only very few cases require the use of Excel 2007 features.
+
+Worksheet colors
+If you really want it, highlight the first row with your desired color.
+
+New functions, e.g. iferror
+Obviously these functions can be replaced by simple alternatives
+
+1048576 rows
+Old Excel version has 65536 rows (post-97 only..?). It could be an appropriate reason to save a file as the new .xlsx format. However, bear)? in mind that for super large data sets, a database with (frontline programming)? is more suitable to handle the great amount of data processing. Also, a ??ly large file could hardly be opened by future users, esp. those on a slow machine. (Do not expect all other people are using a similar class of computer as you are.)
+
+File size
+To me, any Excel file greater than 30MB is not acceptable. It creates hours of time wasted while loading the file. For plain data files, please use .csv instead; otherwise, if the data are large and they are used for complex calculations, plaese split the data into several smaller files.
+
+In terms of .csv format, files larger than 70 MB would be considered undesirable. Split it into smaller files to save the CPU power consumed in just opening the file.
+
+

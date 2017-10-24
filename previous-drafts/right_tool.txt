@@ -1,0 +1,12 @@
+Use the right tool for the right thing
+To know what Excel, VBA and Access (Database) is for
+
+Excel is a spreadsheet program, suitable for calculations of numbers and simple searching tasks. Too complex logic such as involving the concept of looping is not meant to be done in Excel
+VBA is the programming language, suitable for more complex logic to be performed. It also allows GUI interface to be created. And it can be used to handle data transferred to or from databases.
+Database is a place, or an engine to store data. Only minimal logic should exist in all the transactions and queries of a database. The complex logic should be done in VBA or any other programming languages interacting with the database. QUERIES ARE NOT PROGRAMS!
+
+[Exhibit 1: Excel with 100000 rows of 90-column data] -- Common mistake 1: Using excel as a database
+Excel is not a database program. Do not use it as a database to store or manipulate data
+[Exhibit 2: A simple procedure to fill in the missing names in between] -- Common mistake 2: using complicated formula for tasks which could be done with simple VBA code
+[Exhibit 3: Database with a horrible query for creating/inserting a table (Iff)] -- Common mistake 3: Using DBMS as a programming interface to perform logic.
+

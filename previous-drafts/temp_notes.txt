@@ -1,0 +1,2 @@
+total amounts should be at the top instead of at the bottom..
+--> inserting an empty line between the last content lines and the total, just for the sake of summing all when inserting new rows is stupid

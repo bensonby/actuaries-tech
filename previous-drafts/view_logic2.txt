@@ -1,0 +1,17 @@
+Unfortunately this dependency is a "feature" of Excel's core, which is fundamental to its great ease of use. Still, there are a number of ways to avoid part of the drawbacks it give.
+
+
+More disastrous scenarios happen very often in VBA. Let's consider the program below)?. It uses the cell B4 as the input. For a user who only deals with the frontend, if the cell is moved in any way, the VBA script immediately fails.
+Remarks: For these two examples, the problems are not too difficult to fix. They are used to give the main idea only.
+Example 3 - a more in-depth example
+This example better explains the fundamental problem, which is very difficult to be solved easliy.
+Consider the same problem to find the premium of a policy with riders. More specifically, think about the following questions:
+1. How easy it is to add a new policy?
+2. How easy it is to modify the calculation logic of a field (e.g. premium rate)?
+3. Which one will you use for presenting the calculation in an email?
+[Exhibit ] is easy to amend and append for any change in the logic and change in inputs - simply apply the modified formula on that whole column. But it is not readily usable as a report.
+On the contrary, [Exhibit ] is nice to read, but it is cumbersome to modify or append data.
+These examples show the problem with Excel when the presentation layer is tied to the logic.
+Summary
+The grid layout and the labeling of rows and columns (e.g. a cell is called E9) are great obstacles for good stability, readability and maintainability of the spreadsheets. They make the separation of logic and layout so difficult.
+Unfortunately this dependency is a "feature" of Excel's core, which is fundamental to its great ease of use. Still, there are a number of ways to avoid part of the drawbacks it give.

@@ -1,0 +1,30 @@
+File management
+
+creation of folders
+folders help to organize files by putting the right files into the right directory. however blindly creating folders is inappropriate.
+Too few folders with many files is under-organized / structured, it makes files hard to find because of the long list of files in a folder; Too many folders with too few files, on the other hand, is over organized, it makes files not easily accessible due to the folders which act as roadblocks. A balance in the number of folders is important.
+
+another important issue is the naming of files.
+file names that are short are easy to read but the names are often unclear and not descriptive and cannot give a good representation of what the file is about.
+
+File names that are long are more descriptive and give a clearer picture of what the file contains, but it will be harder to read (and thank to the default folder view in Windows, it usually does not the full long file name).
+
+How to choose? When given a choice, I will definitely choose a long and clear file name rather than a short but unclear one.
+
+Duplicate information in full file path
+Imagine a file path like this:
+If you want to view the same file but for the year 2010, you have to modify the path twice. It is not a good practice in file and directory structure - Each piece of information should appear once and only once in the full path. This is consistent with the principle of DRY (don't repeat yourself).
+
+But sadly it is not the complete case with our dear Excel. Excel does not allow opening simultaneously 2 files with the same file names (personally I don't think it makes any sense. note: due to file link problem).
+note: other programs should all allow that
+Error dialog in this case.
+
+Therefore an ideal folder structure like this becomes impossible on Excel files:
+
+It would be too inconvenient if we cannot open the files for comparison. Thus we are forced to create duplicates of information in the file names.
+
+Use of short forms
+
+Use of dates and time in file names
+
+Version control

@@ -1,0 +1,26 @@
+Volatile functions
+Avoid INDIRECT()! It makes workbook calculation slow.
+WHAT ARE VOLATILE FUNCTIONS
+According to ??, volatile functions in cells are re-calculated even when the depending cells are unchanged. Commonly used volatile functions include INDIRECT, OFFSET, ROW, COLUMN, RAND, NOW. (INDIRECT is the mostly (mis)used volatile function!)
+[Exhibit]
+To make volatile functions clearer, let's consider the function RAND(), which generates a random number between 0 and 1. 
+With the calculation mode set to automatic, the cells with RAND() change their values whenever any cells are edited - This behaviour is different from other functions which "cache" the values of dependent cells and know if the cells have to be updated.
+What it means is these functions get recalculated all the time although their precedents do not change. On the contrary??, Excel knows not to recalculate a non-volatile formulae in a cell when it sees that none of its precedents are modified.
+The ... (drawbacks of volatile functions).
+[Link to file demonstration - CURRDATE() as a UDF to illustrate recalculation]
+Setting calculation to manual seems to help a bit (while creating another problem due to manual calculation), but those volatile functions are marked to be re-calculated whenever any cell is changed. It still slows down the calculation time. Such "solution" is only to avoid the drawback, but not to solve the problem.
+You can refer to this demo for a simple comparison of the calculation time. The difference is significant even the calculation mode is set to manual.
+[Link to file comparing vlookup and indirect]
+SOLUTION
+There are several possible solutions to volatile functions:
+1. Replace volatile functions by non-volatile functions or manual input - I believe using manual inputed cells with clear instructions is better than using volatile functions
+2. Re-organize the spreadsheets to avoid using INDIRECT. 
+Many people put the same kind of data in different worksheets, for example each worksheet stores the data of one month. This is a common mistake in worksheet design. In this example all the data should be put in one single worksheet with an indicator of the month.
+3. Use a well-written VBA program or a non-volatile user-defined function (UDF) for the same purpose.
+An example is a workbook which involves the use of random numbers. Using the function RAND() causes the workbook to recalculate upon any kind of edit. Therefore it should be avoided by creating a simple VBA program which fills a specified range with random numbers from 0 to 1. 
+[Exhibit2: solution of
+ worksheets by grouping instead of functions or to one worksheet]
+Reference: www.decisionmodels.com/calcsecretsi.htm
+ms official website
+Remarks: using INDIRECT function causes the worksheet to suffer from another serious problem: layout-logic dependency.
+Add the reference from Microsoft

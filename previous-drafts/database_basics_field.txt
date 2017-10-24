@@ -1,0 +1,48 @@
+If you have ever touched a database, you know what a field is: ??? (defn?).
+
+Although it sounds easy to understand, people make mistakes in assigning the proper fields.
+
+Imagine when we have to set up the premium table (a different rate every year according to the attained age of the insured)  for a product, having separate rates for gender (male v.s. female), smoker status (smoker v.s. non-smoker).
+
+One common wrong designation of such a table is as the followings:
+[Exhibit]
+plan_name
+gender
+smoking_status
+age_0
+age_1
+age_2
+age_3
+age_4
+age_5
+...
+age_100
+[/Exhibit]
+
+The correct one is:
+[Exhibit]
+plan_name
+gender
+smoking_status
+age
+premium_rate
+[/Exhibit]
+
+The first exhibit is inappropriate because...
+A. The age number is the parameter, not a field. The field name should be "Age", but not "Rate for Age XX".
+It complicates all the processing staff, e.g.
+1. Extracting the rates for all ages of a particular insured
+2. Extend the premium rate to age 120
+3. Obtain the premium rates of age 30-50
+3. Obtain the rates when the age is a multiple of ten
+4. Obtain the 5-year average rates
+(better example!)
+
+
+The Correct Approach
+Database Engine (e.g. MySQL Microsoft Access) (check term)? is merely used for data storage. The data should satisfy the principles of a relational database (reference! to the tutorial). Some of the key points are:
+1. No redundant (duplicated) data unless it greatly improves the performance
+2. Primary key must be present in all the tables
+3. Column names are meaningful names. Exhibit ? shows the wrong way while Exhibit ? shows the right way. (Theoretical explanations here). A simple example can illustrate their differences: imagine the case if you want to obtain the rates for years frrom 30 to 50, and perform logic in VBA. What would the query (SQL) be like in the two cases?)
+[Exhibit: premium rate table using field names year001,year002, etc.]
+[Exhibit: premium rate table using two fields, one for plan and one for age and one for year.

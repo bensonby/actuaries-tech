@@ -1,0 +1,26 @@
+Workbook Links
+The troublesome linkage
+
+Introduction
+A workbook may consist of cells which refer to values in a different workbook. The workbooks referred to are called Links and can be found in the Menu: (Edit->Links, Alt+E+L).
+The problem is that renaming and relocating of workbooks destroy the validity of the links. This is the reason most of us asks Excel not to update any values in links and leave it as is (which is not a good practice in my view).
+Although it seems to leave no significant risk to the workbook itself (as it functions well), it creates a great potential for non-traceable logic in worksheets.
+
+The problems associated with links are as follows:
+1. When the source workbook is being edited without the dependent workbook opening simultaneously, the dependent workbook will not be updated.
+2. When the source workbook is being "saved as", the corresponding link in the dependent workbook may change or remain the same, depending on whether it is opened at the time of saving. It causes possible errors in the process.
+3. The source workbook may be moved, renamed or deleted. It leaves the users unable to trace the file easily.
+4. The source workbook may be modified, moving the source cell to another location, or updating the values. It will either change the value in the source workbook or making it not up-to-date.
+5. When the workbook is moved to another drive, Excel does not keep the locations of the links in the workbook correctly. [Exhibit]
+6. The list of depending workbooks (links) can be found from the Links command. However we need to search manually in the formula for the cells which actually depends on the links.
+Of these problems, the first four are the most critical ones since they damage the validity of the workbook.
+
+Possible remedies suggested for links:
+1. Only use links when both files are owned by the same person or department.
+2. Create a table documenting all the external workbooks used with full path to file, access date and worksheets/cells used.
+3. Highlight the cells which link to an external workbook with a specific color pattern.
+4. Use a plain value instead of leaving as a link for values which are a) not supposed to change, or b) not tracable upon sending to an external party
+5. The above tip should be used whenever the source (external workbook) is not owned by the same person as the dependent workbook.
+
+Conclusion
+The feature of links allows the sharing of data between different inputs, but it introduces vulnerability which makes Excel files broken easily. There are some remedies for them but they are not always possible. We have to be CAREFUL about links.

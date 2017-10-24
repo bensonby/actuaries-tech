@@ -1,0 +1,70 @@
+quote: code as maintained by killer
+=> design excel as maintained by killer
+datedif, month end, date and csv, worksheet description and source, minimal vba, no vlookup
+
+problem for folders: no alt+v+a
+another good point: copy path is with J:; and copy multiple file path
+
+messages to be conveyed
+1. do not learn programming with excel and vba - you will not be able to learn it properly. a) Your program will be greatly dependent on and limited by Excel's grid layout. while this is often not the case. b) You will spend most of the time in figuring out how to do this or that in Excel, due to its poor documentation and lack of good reference. These do not improve your programming skill but spend you a lot of time
+in simple words: ecvel is not for building applications, it is for calculations (think about its text-handling and color-handling abilitied)
+2. Usually the formula and the logic of a particular cell or VBA program should not be complicated. If it appears to be complex, there is a high chance that the root of the problem lies in the poor spreadsheet design.
+3. Layout logic and dependency in Excel spreadsheet. One is responsible for logic and one for presentation
+4. modulisation
+Each function should only perform tasks that are tightly bounded by itself. It should be specific. Imagine the "analogous" example of management - manager is responsibe for coordinating the divisipn pf tasks. Each individual is a "sub-function" responsible for a specific sub-task. Sub-tasks out of its own scope will be given to other individual to deal with.
+top-down approach, bottom-up approach
+reusable -> library
+also applicable to sql (nested queries), formula
+5. error handling
+6. good code is its own documentation
++quotes
+7. case study
+8. learn more
+Excel with VBA is limited. Getting to know more is important. no one programming language is suitable for all purpose
+e.g. types of programming languages: object-oriented programming (Java), functional programming (JavaScript)
+Regular Expressions
+XML, HTML, css, latex, ruby (learn the right way to program and experience how fast it can be to get an app working) etc.
+Learn from the code of other people; pair programming / programming in a team
+
+dry - acf mapping sql determining treaty or by eff date
+kiss
+nih
+yagni
+hard code
+magic numbers or strings
+law of demeter
+function wrapper, any example functions that have changed from 2003 to 2007? (encapsulation)
+dont loop by rows, obtain them all at once, or use filter
+no extra blocks of contents and info beyond those visible
+eg 1: summary at the top
+eg2: 1 pivot table in one ws
+learn hotkeys 
+ excel 2003
+  win+r ctrl+v
+
+use the right tool for the right task, also list the disadvantages
+eg database - excel enough rows, pspadvmacro, plot/cal using wolframalphao
+flowchart made by ppt or visio not excel
+open multiple files - use cmd
+basic sql not for logic
+merge files or list dir - cmd or simple utilities like explorer++
+
+typesetting math doc - use latex
+
+for nonprogrammers
+learn to read code
+basic word +ppt skill
+free alternatives exist everywhere
+
+search for the right way and conventions
+
+
+
+
+
+
+
+
+
+
+

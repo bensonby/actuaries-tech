@@ -1,0 +1,56 @@
+Biggest mistakes
+
+Microsoft Word
+1. Using multiple returns or spaces or tabs to align text.
+1. Not knowing the use of tabs 
+2. Not using styles for formatting
+3. Using empty lines to adjust the spacing between paragraphs
+4. Not knowing the use of page/section breaks 
+5. Doing text formatting with the buttons on the home ribbon 
+6. Outlook. 3
+
+Microsoft Excel 
+1. Lack of documentation and explanations 
+2. Slow and over-complicated workbooks 
+3. Using volatile functions such as INDIRECT and OFFSET 
+4. Using VLOOKUP
+5. Using merged cells
+6. Duplicated or unnecessary calculations 
+7. Bad file names and worksheet names 
+8. illogical flow of worksheets 
+9. Isolated blocks of cells 
+10. Using manual calculation mode
+
+VBA with Microsoft Excel
+1. Complicated VBA codes due to bad spreadsheet design
+2. No descriptions about what a button does
+3. No error handling 
+4. Non-reusable codes and functions 
+5. Doing things that are easily done by human
+6. using ActiveSheet, Select
+7. Hardcoding range address in VBA code
+8. Occupying Windows clipboard when paste format isn't needed
+9. Bad function/sub names or bad module names
+10. Lack of validation cells
+
+Microsoft PowerPoint 
+1. Too many words in slides (30 words are too much)
+2. Boring presentations 
+3. Not establishing and emphasizing the overall structure 
+4. Not using slide masters for formatting 
+5. Abusing "clip arts"
+6. Type everything in the PowerPoint or treat the PowerPoint file as a complete document 7. Trying to be interactive with a wrong group of audience 
+7. Outlook.3
+8. Overrun
+9. Trying to be interactive with the wrong group of audience  
+ 
+
+Microsoft Outlook 
+1. Replying unrelated stuff in a same conversation with a bad subject 
+2. Writing long emails without focus 
+3. Include text or numbers in emails as a picture (to preserve formatting or whatever )
+4. Forgetting to attach files 
+5. Bad folder structures
+6. Bad subjects: too general or too long
+7. Respond to phishing emails
+8. Sending attachments that are too large

@@ -1,0 +1,20 @@
+Cost of Automation
+Complicating all the stuff
+
+A. Automation in spreadsheet formula
+
+We all love to have a general formula to cater for different cases. Seldom of us would think of the negative impacts a super powerful general formula could bring.
+Let's consider the following 2 versions of the calculation of ? by loss triangle method.
+(Exhibit 1: using plain, non-general formula)
+(Exhibit 2: using index)
+The one who develops Exhibit 2 surely loves that generalized version. Whenever extra periods are added, a simple "fill down" command completes the task.
+However for the reader, it's two-fold. The INDEX command with the numeric parameters makes it hard to trace and follow. In contrast, the method in Exhibit 1 is easy to understand despite its non-automatic characteristic.
+I am not suggesting if generalized formula are good or not. The point is that generalized formula is not the only ultimate goal. There should be a balance between readability and automation in formula.
+Whether to adopt a generalized but long, complicated formula depends on your own judgement.
+
+Points to note:
+1. If the formula are not generalized in nature, the corresponding cells should be highlighted to warn the user to modify the formula if necessary.
+2. a good thumb of rule is: try to keep your formula within one line shown in the formula bar (? characters). If you find your formula too long, you can break it down into several cells, making it easier to read.
+
+B. Automation using VBA
+leave it in another article

@@ -1,0 +1,27 @@
+Making your excel spreadsheet easier to read
+
+The "easy-to-use" feature of MS Excel has a major drawback: it is easy to create unclear spreadsheet. The unclearness/lack of clarity is resulted from unobvious flow of calculation logic, either within or across spreadsheets and workbooks. It is also contributed by lack of descriptive text and the overuse of abbreviations.
+
+Tips to make your workbooks easier to follow
+layout of worksheets within a workbook
+1. Use meaningful worksheet names and avoid overuse of short forms, e.g. use "total" instead of "tot".
+2. Enforce a consistent order of worksheets, either strictly from left to right or from right to left. A useful tip is the use of numbers to indicate the order of the worksheets. Avoid any complex ordering involving loops.
+3. Use suitable prefix to indicate the type of worksheets, possibly with the numeric order giving hints to the  such as Ref_ for reference tables, Input_ for user input fields, Summary_ for summaries.
+
+A good example of worksheet layout satisfy the above tips:
+<to be inserted>
+
+Layout of data blocks within a worksheet
+1. Users don't expect separate blocks present beyond the visible range at first glance, i.e. put summaries and small areas only at the top or bottom of a worksheet 
+2. adjustments
+Within a column of consistent formula, manual adjustments mayv have to be made, e.g. make sure the guy using the file will not overwrite your manual hardcoded adjustments, an easy easy is to create a separate column for all manual adjustments
+
+3. same kind of data in the same worksheet
+It is a common practice to put the data of each year or month in a new worksheet. However if the data are in exactly the same format, they should be put in the same worksheet, by using an extra column to indicate the year of the data.
+example with sumif
+and formula in one single column in one single worksheet only
+it makes modifications easier and makes the workbook clearer by reducing the number of worksheets
+
+
+comments and explanations
+formula is often insuffocient in explanation

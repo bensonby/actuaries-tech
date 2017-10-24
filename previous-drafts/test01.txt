@@ -1,0 +1,18 @@
+Excel test #1
+This quick test will help strengthen your Excel skills. It should take less than 5 minutes to complete.
+
+Task
+Obtain the age and sex of the corresponding policy number. Note that the policy number may not exist.
+
+Rules
+Calculation time limit: 0.2 seconds (on a modern machine)
+You can modify the spreadsheet freely to complete the task.
+
+Download
+Excel file of the test
+
+Answer
+The answer will be released after a week.
+
+Hint
+If you are stuck, you can read: url here...

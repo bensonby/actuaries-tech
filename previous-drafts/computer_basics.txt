@@ -1,0 +1,103 @@
+emails
+use of cc, bcc, forward
+how to distinguish spams and phishing mails
+subscribing to rss feeds
+common free email hosts
+
+folder and file management
+use and meanings of file extensions
+knowledge on common file extensions, zip,jpg,gif,png,bmp,...
+
+searching skills
+use of quotes, file types, cached, images/videos
+search for softwares and install them, distonguish freewares from sharewares or commercial
+open source softwares
+
+word processing
+use of styles
+table of contents
+header and footers
+footnptes
+page breaks
+captions
+
+excel
+basic functions and formats
+
+powerpoint
+keys to effective presentation with ppwerpoint
+jumpibg to slides
+printout modes
+possibility with two monitors in presentations
+<video youtube>
+
+printers and print settings
+screen resolutions
+hardwares and drivers and know how to connect mouse, speakers etc
+file size units ans size of common formats
+fonts, common categories, commonly used fonts
+
+audio
+midi, wav, mp3, aac, ogg, etc
+volume control
+recording/basic audio editing with audacity
+
+text encodings, ascii big5 gb2312 unicode, difficulties with cjk characters
+how to switch encosongs for wronfly encoded webpages
+url encodings
+
+how to scan virus, malware, spyware, identify virus files
+criteria for good passwords
+
+basic photo editing with paint and gimp
+enlarge or shink pictures
+crop pictures, rotate pictures
+adjust brightness and contrasts
+print screen skills
+knowledge on dpi, rgb, cmyk, anination gif
+
+disc cd or dvd or audio cd burning lesson
+extracting videos/audio from cd/vcd/dvd
+extractinh photos from sd card
+
+colors in computers
+rgb
+cmyk
+alpha
+
+basic hotkeys
+Ctrl+c,x,v,p,o,n,f,h,a,s,z,y
+home, end, w/ ctrl, page up/down
+printscreen w/ alt
+win+l,e,r, arrows in win7
+Alt key, alt+space
+ctrl+shift+~
+-- as key to higher efficiency
+
+list of useful websites
+maps, dictionaries, search engines, videos, songs, education, public lib, lcsd, etc
+
+operating systems, browsers
+major companies about IT, ms, apple, google, hp, etc
+
+smartphones
+
+using ftp
+input methods, esp chinese
+ssh
+
+copyright issues, Pirate softwares, data explosion, truth or false claims on internet
+
+internet censorship
+
+use of usb
+different cards sd, mini sd, micro sd
+
+what can computer do?
+
+specialty
+portfolio of pictures
+short video
+programming, e.g. with database
+web page, e.g. responsive css, js
+essay

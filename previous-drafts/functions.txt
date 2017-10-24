@@ -1,0 +1,6 @@
+Useful Functions
+useful but not widely used
+
+Rank #1: DATEDIF
+
+Rank #2: ADDRESS

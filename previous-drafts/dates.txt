@@ -1,0 +1,97 @@
+Dates
+A1. Dates are numbers
+Some of you may not know this fact: Dates are just numbers in Excel.
+[Exhibit: date view + number view (number - date = 0)]
+The date 31-12-2011 is equivalent to the number ?????, i.e. the display "31-12-2011" is a format setting for the number ?????. This number represents the number of days since ?. (Press Ctrl+Shift+3 to set a cell to be in date format; and Ctrl+Shift+~ for general number format).
+
+The basic way to create a date is to use DATE(2011, 10, 31). But you may not know this: DATE(2010, 14, 1) and DATE(2011, 3, -1) also work. Try it! A simple question for you: which date does DATE(2012, 0, 0) represent?
+
+A2. aritymetics on dates
+
+B. the useful function: DATEDIF
+DATEDIF: the useful function
+DATEDIF calculate the differences in number of years/months/days given two dates. Examples are shown at the right.
+=DATEDIF(date1, date2, interval)
+date1 has to be earlier than date2
+
+The other possible values for the last arguments are "m", "d", "ym", "yd", "md". ... Examples are shown at the right.
+(This function is available starting from 2000 version)
+
+C. Examples of Date Processing:
+Get the month end of a given date.
+Get the next month end given a month end
+Get the quarter (1 to 4) which a given date belongs to
+Get the number of months between 2 month ends
+...?
+
+D. Date Format
+The display of the date can be adjusted by "Format Cells" (Ctrl+1) -> "Custom". Here a "format string" is used to control how the date is displayed.
+With the date 8th June 2011, below shows the possible formats:
+d 8
+dd 08
+m 6
+mm 06
+mmm Jun
+yy 11
+yyyy 2011
+(and more?)
+not suggested.. hide thw day imfo foe loojup
+
+Use any combinations of the above to achieve what you need.
+
+E. Default Date Format
+
+The default date format used is usually either mm/dd/yyyy or dd-MMM-yy (unless manually modified).
+Some of us, being used to the date format of dd/mm/yyyy, may want to reverse the order of dd and mm in the default format.
+
+How to change?
+This is a system-wide settings. ...... (instructions)
+
+Issues with the change
+You have to follow the system date format when entering a date in Excel. (If the format is set as mm/dd/yyyy, you can only enter 12/31/2011 in the cell, but not 31/12/2011)
+Opening existing excel files (.xls, .xlsx, .xlsm) with dates are alright. However when excel reads csv, the parsing of dates follow the default date format.
+  a. For example, when the default format is mm/dd/yyyy, opening a csv containing "08/06/2011" will be interpreted by Excel as 6th August 2011. For the other case when the format is dd/mm/yyyy, opening the same file will give the date 8th June 2011.
+  b. When the default format is mm/dd/yyyy, when opening a csv having the date "27/06/2011", Excel will fail to parse the date and it turns out to interpret 27/06/2011 as a text.
+Tips for the solution
+If the format has the month and day order unfortunately reversed, it has to be converted. Below shows a screenshot for the adjustment formula.
+Another way is to use the text delimiting function.
+gif showing the steps
+How to avoid such problem? The date format depends on system settings on each computer, thus I suggest avoiding this risk by:
+1. use the number yyyymmdd to represent a date
+2. always use the format dd-mmm-yy when savinf into csv (method to do?)
+3. always store unto csv using the raw number of the date, not recommended as it is not intuitively readable
+
+F. how about time?
+
+not commonly used
+be careful of time zone difference
+always include a time zone e.g. UTC+8 to indicate the correct time to be recognized worldwide.
+
+show both date and time in cell format..
+how?
+
+use yyyymmdd as date to eliminate all problems
+
+G. formula including dates
+Dates as text
+From time to time you will need to create sentences such as "Balance Sheet as of 31-MAR-2013", where the date comes from another cell having the input date 3/31/2013.
+Assuming the date is stored in cell A1, the formula ="Balance Sheet as of "&A1 will give "Balance Sheet as of xxxxx", because the formula includes the date using its value, i.e. its serial number. (Recall that the date displayed is merely a format setting of the serial number)
+To include the date in the desired format, it has to be: UPPER(TEXT(A1, "dd-mmm-yyyy")
+
+Dates as key for lookup
+Using the date as a key for lookup
+never just use the serial number!!
+
+brware of clever interptryation of plan code APR03.. (other cases, plan 2E05, text 300,301)
+
+exercise
+get next premium paying date (unit test given as hint)
+
+convert a date with format yyyymmdd, e.g. 20110508 to a date using a formula
+
+hotkeys
+Ctrl+Shift+2: make a cell in date format (dd-mmm-yy)
+Ctrl+Shift+??: make a cell in time format (h:ss XM)
+Ctrl+Shift+~`: make a cell in general format
+Ctrl+1: open "Format Cells" dialog
+Alt+D+E: open "delimit text..."

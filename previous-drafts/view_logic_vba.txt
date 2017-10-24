@@ -1,0 +1,40 @@
+MVC Part 2
+All programs should adhere to MVC "framework"?
+
+For people who have had some experience in writing programs, the MVC framework is a must-learn philosophy in order to write good programs.
+(start_row, end_row assumed)
+[Exhibit non-MVC]
+Public Sub output_plan_name
+  j = 0
+  For i=start_row To end_row
+    If cells(i, 1).Value <> cells(i-1, 1).Value Then
+      Worksheets("output").cells(j, 1) = cells(i, 5).Value & cells(i, 6).Value
+    End If
+  Next i
+End Sub
+[Exhibit MVC]
+Public Sub output_plan_name
+  values = get_distinct_plan_names
+  column_output_to_sheet("output", values)
+End Sub
+Private Function get_distinct_plan_names
+  Dim return_value(10000) As String
+  Dim i as Long
+  For i=start_row To end_row
+    If cells(i, 1).Value <> Cells(i-1, 1).Value Then
+      return_value(j) = cells(i, 5).Value & cells(i, 6).Value
+    End If
+  Next i
+  get_distinct_plan_names = return_value
+End Function
+Private Function column_output_to_sheet(ws As String, arr As Variant)
+  i = 0
+  For Each element In arr
+    Worksheets(ws).Cells(i, 1) = element
+    i = i + 1
+  Next
+End Function
+
+The above exhibits show the two programs, one using MVC and one not using MVC philosophy. In the program not using MVC, whenever the logic [Cells(i, 5).Value & Cells(i, 6).Value] or the output format (as a column in the worksheet) is changed, the Sub output_plan_name needs to be changed.
+While in the program using MVC, output_plan_name acts as the overall controller, get_distinct_plan_names performs the logic and column_output_to_sheet performs the output task. By enforcing MVC, each module is responsible for its own specific task only. Later if the logic is changed, only get_distinct_plan_names has to be changed; if the output format is changed, only column_output_to_sheet has to be changed.
+

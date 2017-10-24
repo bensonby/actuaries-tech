@@ -1,0 +1,113 @@
+Layout mixed with logic:
+
+have to fill down formula
+-> change in reference
+
+------------------------
+
+Calculation
+
+Manual calculation due to slowness, which is due to poor formula
+
+Links -> manual update of links?
+modifying linked cells --> update only when opening at the same time
+
+data table: unstable, no indicator of finished or not
+
+p.s. Checks? it means we all agree that Excel is easy to have errors
+
+------------------------------------------
+
+Excel Syndrome
+You treat repeating things e.g. copying formula, is normal and is what you have to do
+You think macro is equivalent to program
+You are more used to / prefer reading (B2+B3)/2/1000*C3*$G$1 to (sa[t-1]+sa[t])/2/1000*prem_rate[t]*loading
+You use Excel for formatting and layout, e.g. Policy Illustrations
+You think VBA / Excel is powerful, because of what it can do or whatever..
+(no.. the syntax is horrible, no full OOP ffeatures, no MVC.. it is VB not VBA.
+  -- we need to learn others, and read others for polishing)
+You use excel as a calculator (R is definitely better)
+You use excel to type simple notes / remarks
+To you, a date/time value means the number of days
+
+=-----------------------------------------------
+Comments
+Commenting person cannot be hidden..
+Copying comment -> the original commentor
+comment triangle not visible when filtering is on / background color is similar
+Hard to locate all comments in workbook (the "Special" feature is not helpful enough)
+Layout bug of comments in case of frozen pane
+
+-------------------------------------------------
+Why easy to have errors?
+Pivot table upon data update -> need to refresh / change data range
+New data added -> need to fill formula / modify reference range
+Cell deleted -> changed to REF! Error
+Use links -> external file source changed / moved / deleted
+
+-------------------------------------------
+slow calculations
+vlookuup with false: slow
+
+--------------------------------------------
+Macro vs Program...
+to be continued..
+
+------------------------------------------------
+
+Use of VBA: minimal
+Due to
+1. we are not technically equipped (not meaning incapable of writing program that works, but incapable of writing good codes)
+2. excel's poor response upon errors - 1004? 400? Hard to debug
+   but as far as i see no VBA program does error handlings / data validation to a good extent
+3. Hard to trace - it leaves no trajector on the working when most of the output will not be in formula (if formula works, no need for VBA)
+   VBA can override anything in the worksheet.
+
+After considering these, in my experience there are 2 common tasks that will be accomplished by VBA
+1. As a data table
+Although excel has a data table functionality. It is unstable and unreliable and will fail when the amount of inputs are large.
+VBA is used for a better "data table" feature.
+In the usual case, we have lots of policies but only a single reserve calculator which can handle only one policy at a time
+2. Opening multiple files to extract content
+There are times when we want to extract pieces of information from multiple workbooks and worksheets, e.g. There is an monthly excel file storing the inforce policy information of a particular plan.
+-- One possible way is to use indirect but it is not preferred - as mentioned in the previous article ###. A VBA program will perform better given that the format of ....
+
+--------------------------------------------------------------
+My opening multiple file library:
+- prevent any prompt on password, etc. error handling
+- omit 2nd column t oget all worksheets
+Implement functions for get_next_wb()
+Doc: close on next attribute
+Put to github!
+
+------------------------------------------------------
+My data table VBA library:
+Purpose
+Data table is an excel built-in function which.. (according to official). However the function does not work stably and will fail when the amount of data or calculation is large. It also gives no progress info during calculation. Personally I have experienced issues of data table not fully completed, leading to erroroneous result. Therefore a simple VBA function is written to improve it.
+
+Applications
+The applications of data table in the actuarial tasks are quite common, e.g. reserve calculation of policies, pricing result of policies, valuation of investment assets, etc. (ask alvin for more examples)
+
+Inputs and Outputs
+The followings are the attributes required to define a data table. Make sure the below ranges are defined with names using the same prefix
+1. Input column heading: a key field, e.g. The n-th record to be processed
+2. Input cell: a cell which the key field should be copied to for that corresponding record to run
+3. Output cells: a defined range of cells, in the form of rows, which are the outputs for a single policy (to be pasted to the consolidated result)
+4. Output column heading: the heading label where the output cells should be copied into. Notice that this is just a single cell
+
+Important note: this layout works in most of the cases. If yours does not fit into this format, it means the design of the spreadsheet is not satisfactory, please modify the spreadhseet layout instead of modifying the vba code. VBA codes are meant to be reused where spreadsheets should be well designed.
+[Screenshot - the recommended layout example]
+
+Code
+When the spreadsheet is ready and the ranges are defined. You are ready to start writing the simple one-line VBA code!
+
+Library
+[whole function code]
+
+Usage
+It is just one line! Coding should be that easy, right?
+[code]
+
+Note on the usage
+The records which will be run are the consecutive nonempty rows with key field not empty.
+There is an optional fifth argument for whether the excel status bar should show the current progress. (notice that it is implemented using a function show_status. Feel free to modify this function for customized behaviour (but not on the library.. EACH FUNCTION SHOULD ONLY BE RESPONSIBLE FOR ITS OWN STUFF)

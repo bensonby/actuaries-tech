@@ -1,0 +1,31 @@
+VLOOKUP - the most commonly used yet the most commonly abused function
+
+Introduction
+VLOOKUP is a function very well-known because of... sorry, VLOOKUP is not really that useful - it is not necessary at all. Please avoid the use of VLOOKUP.
+Problem with VLOOKUP
+1. Dependency of layout and logic - column order
+The value to be found is expressed as the column number. If the column order is altered, the function fails to adjust itself. In light of this, some people added a number reference above the columns, as shown in the screenshot below. However manual adjustment is still needed whenever columns are added (Filling in formula). Excel is not supposed to be that manual.
+Another problem lies on the restriction that the value to be matched must be the leftmost of the range, and the target column hence must be placed on the right of it. This is another dependency of layout and logic. Please think: Why must I place my columns in this way just for the sake of the stupid VLOOKUP function?
+2. Referencing unused ranges and values
+The range in VLOOKUP (the second argument) has to include both the matching column and the target column. Usually the range consists of far more columns other than the two in interest. It creates trouble for formula auditing. It is hard to trace which cells are dependent on a particular cell. As shown in the below exhibit, Excel thinks that the Sex is necessary for the computation of the "plan code" (as well as all other fields using the whole data range), but it is obviously not the case.
+What to use then, if not VLOOKUP?
+Imagine you are about to type in the formula =VLOOKUP(A3, $A$8:$D$16, 4, FALSE). The followings are two possible alternatives which can avoid the problems mentioned above:
+1. INDEX with MATCH
+=INDEX($D$8:$D$16, MATCH($A3, $A$8:$A$16, 0))
+Please refer to the documentation of INDEX and MATCH if necessary. This formula perfectly solves the problems because all arguments involved are real cell references, and they are exactly the cells in use. No redundancies. No column order problems. The last argument (zero) is equivalent to the last argument in VLOOKUP (false), while the MATCH function provides more than that.An extra benefit is the quick navigation to the target column - Press Ctrl+[ in the cell and it will bring you to $F$3:$F$19 directly.
+2. LOOKUP
+=LOOKUP($A3, $A$8:$A$16, $D$8:$D$16)
+Please refer to the documentation of LOOKUP if necessary. This function is not as flexible as the above function due to its limited nature, but is definitely shorter. The range to be matched must be sorted in ascending order; also it can only return the match for the largest value that is less than or equal to the value.
+When should I use VLOOKUP?
+The only scenario where the use of VLOOKUP can still be justified (acceptable but not fully justified) is when the target column is a dynamic number. For example to find a premium rate by issue age and duration in a select rate table, you may use something like:
+=VLOOKUP(Sex & IssueAge, PREM_RATE_RANGE, Duration+1, FALSE)
+Please note that this usage still suffers from the problem of layout-logic dependency. Imagine when a column is inserted between the Rate Key and the Premium Rates... The correct way to solve the problem is left for you as an exercise.
+In all other scenarios VLOOKUP should never be used.
+
+Summary
+From now on, forget about the VLOOKUP function. It damages the layout structure of Excel. Please use INDEX+MATCH or LOOKUP to replace it. Personally I will recommend INDEX+MATCH because of the possible options and the convenience in navigation it brings. You will a) find your workbook less prone to error due to layout changes, and b) find the formula easier to read because you see the exact cell ranges.
+Regarding the lookup features of Excel, there are still more to be discussed - in the future articles.
+
+Speed issue:
+vlookup(same value , for multiple column values) -> use match only once
+

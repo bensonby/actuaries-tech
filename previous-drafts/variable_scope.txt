@@ -1,0 +1,22 @@
+Variable Scope
+no such concept in Excel
+
+Here I am referring to the workbook design, not VBA.
+
+In programming languages
+In programming, the variable scope is an important concept. Functions have their own local scope; Classes have their own scope. In JavaScript, a functional programming language,  the concept is even more vital due to the anonymous functions.
+Variable scope helps organize the structure of a program, outlining in which part of the program a variable is effective. Hence the usage and the extent it affects the program can be traced and controlled easily. Programmers agree that the use of global variables, which are variables that can be accessed throughout the whole program, should be avoided.
+In Excel
+However, worksheet cells have no concept of scope (unless self-regulated). A cell can be used in its own worksheet, in other worksheets, or even in other workbooks through links. It makes the use of a variable hard to be traced. You won't know how much the cell will affect others._(footnote)
+Some designers of Excel workbooks try to put all the inputs into one worksheet. It is a good practice but it is not enough. The underlying problem is the fact that any worksheet can access those variables.
+Suggestion
+My solution for the problem includes the following:
+1. Put all single-valued inputs used in a worksheet in that worksheet
+2. If that single-valued inputs are used in multiple worksheets, create it in a separate worksheet (e.g. "Inputs") and put that value in the worksheet again. Hence the worksheet will only use values that are present in itself.
+3. Include all table-typed multiple-valued input in a separate worksheet (e.g. "Tables"). Highlight the cells which reference to the tables using a specific color pattern.
+4. In case of links (refer to the other article on this), highlight it using a specific color pattern if links has to be used.
+Conclusion
+Excel has no concepts of variable scope. The best thing we can do is to be self-regulated on the use of reference cells - as mentioned in my suggestions. Otherwise a workbook is going to be complicated and is difficult for others to study.
+
+footnote:
+1 Although Excel has a "Trace Dependents" feature, it only acts as a remedy in a limited fashion: a) it cannot trace cross-workbook links b) it fails to trace the correct cells when functions like VLOOKUP is used. c) It cannot trace the varables in case functions like INDIRECT are used; d) It cannot traced named variables correctly. Most importantly, it does not solve the problem Excel has created.

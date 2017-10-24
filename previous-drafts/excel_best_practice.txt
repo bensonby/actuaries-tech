@@ -1,0 +1,15 @@
+Best Practice in Excel
+To make your workbooks easier to read
+
+1. Distinguish between input cells with a different cell color
+
+2. Distinguish between formula calculated by the workbook and calculated through and external file (links in Excel) with a different cell color
+
+3. Establish good version control log of every workbook and maintain consistent file names for different versions (e.g. v01, v02 and so on)
+
+4. Use proper worksheet names. Some people use worksheet colors but it is a feature not in pre-2003 versions therefore I do not recommend. Good worksheets names are more important.
+
+5. Remove obsolete NAMES defined in Excel. Check all of them by pressing Ctrl+F3, you may be surprised to see all the #REF! there.
+
+6. Avoid volatile functions (explained in the chapter "Volatile Functions")
+

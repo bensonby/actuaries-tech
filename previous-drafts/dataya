@@ -1,0 +1,46 @@
+VBA Library: Data Table
+
+There is a tool called "data table" in Excel, at least since Excel 2000. It allows user to use one single set of formula to calculate the results for multiple scenarios. An example is a policy reserve calculation engine which calculates only one policy (one scenario) at a time, while there are multiple policies. The reserves of all the policies can be calculated with only one set of formula by using data table function. However we seldom use such function because of the flaws that it has.
+
+Problems with Excel's data table function
+1. no clear indicator of completion.
+2. no indicator of calculation progress
+3. the potential to calculate only a part of the inputs because we can not make sure all calculations are complete.
+These problems makes data table not useful and nobody uses it.
+
+Solution:
+1. If possible, create the formula for each policy to avoid the need of using a data table.
+2. use a VBA function to create a data table which solves the above problem.
+
+VBA Data Table Library
+
+4 key elements of a data table
+Only four key elements are needed to create a data table, which are the arguments to the data table function.
+If you find these parameters not enough for your spreadsheet, it simply means you have to improve the design. Do not modify the generalised and reusable code to cater for a bad spreadsheet.
+
+Usage
+a screenshot showing the elements
+Options:
+a. replace or append
+append-can be used for cases where one scenario generates multi-row output.
+
+Features
+Enforce a correct Excel spreadsheet design
+With the specified 4 inputs, it forces the users to design their Excel files appropriately. to cope with the data table - only 4  elements required
+Show the current progress of the data table in the status bar
+screenshot (with %)
+Allow two output mode: either to overwrite the output cell or to append in the output.
+No clipboard usage required. Normal copy and paste can be done.
+More customizations
+It allows specifying the starting and ending row for the data table to run. How about a custom column to indicate.. for each item?
+
+Spreadsheet design
+the single row of policy information should not appear underneath the header row of the data. Doing so will mix the formula and the data up.
+All the output information should appear in a single range. It aMvc and separate output from calculations
+Give a clear description of what the button does.
+
+Limitations
+If, in the process of calculation, a refresh of pivot table or a goal seek is required, you have to pass more arguments to the function (use class config!!!) data_table.pivot = array(), goal seek = array() order..?
+This is not a good solution to such custom tasks to be performed during the data table procedure. However it is difficult to find a better solution due to the limitation of VBA language (lack of functional programming).
+seems calling a predefined function would be better.. interpreting vba => wont give error? also explain error of not existing in faq
+what arguments passed to callback? can custom impkement class func thru vba oop?

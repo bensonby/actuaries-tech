@@ -1,0 +1,27 @@
+Define Names (Part 1)
+Making formula easier to read and interpret
+
+With the layout-logic dependence, the core design of Excel uses cell references, a cell is represented, for example, as A9 or R9C1.
+The problem is A9 has no actual meaning. I bet you have seen formula like this too often: IF(A5=1, C5*Assumptions!$F$3, D5*Assumptions!$F$4)*(M5-N4*0.5)+$O$1*Assumptions!$D$10*0.25. Surely it takes time to understand the underlying logic. One has to go through all the cells: A5, C5, D5, M5, N4, O1, Assumptions!F3, F4, D10 to understand what each of the cell means.
+When the worksheet consists of records row by row, not much can be done (See Exhibit....) . But if any kinds of constants are used, they can be named, especially when they are located in another worksheet (cells in the worksheet Assumptions in the example). By using names, formula can look a bit more friendly to the users.
+Another advantage is the shortening of formula, which makes them easier to interpret. Below is an example. (Exhibit 4-a)?
+[exhibit: lookup, adding 4 different
+ =SUMIF(A3, Prem_2006!$A$2:$A$5418, Prem_2006!$C$2:$C$5418)+SUMIF(A3, Prem_2006!$A$2:$A$5418, Prem_2006!$E$2:$E$5418)+SUMIF(A3, Prem_2006!$G$2:$G$5418, Prem_2006!$I$2:$I$5418)+SUMIF(A3, Prem_2006!$G$2:$G$5418, Prem_2006!$K$2:$K$5418)
+With the proper use of names, it can be simplified to:
+=SUMIF(A3, POLICY_IF_2006, FY_PREM)+SUMIF(..
+
+Tips and Suggestions
+1. Ctrl+G or F5: Go To (e.g. enter the 
+//smaller note: Shift+Enter
+2. Always open up the Names Manager to see............. (clean up) obsolete names. Sometimes names are defined to refer to a cell in an external file. It causes a link in Excel.
+3. Names sometimes appear more troublesome for users who are not familiar with the workbook.
+4. When the zoom level is small, the names defined on a large range will be shown on screen. illudytation!
+
+Problem with Names
+1. It is not easy to design a good name for a cell. Ideally names should be short but easy to understand (where in reality this is hardly the case. We often end up locating the cell to have a sense what it means).
+2. Copy & Paste operations of worksheets between workbooks may cause name duplications.
+illudyration plus what will happen?
+3. Names are more difficult to be traced by using the "Trace Precedents/Dependents" auditing feature of Excel. Excel does not recognize names (CURRENT_DATE) and cell addresses (A1) interchangably. [use names as in above example] show an exhibit
+4. There are no friendly name browser in Excel. They can only be accessed using Goto or "cell address"
+5. Excel does not adjust the range automatically upon data append (noun?). - Theoretically it is possible with a dynamic range address "eg here", but it makes the workbook slower and harder to read (logic is less visible) and the name will not be visible in the "cell address" field, illustration
+.. correvt name of thsat affress field?

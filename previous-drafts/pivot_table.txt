@@ -1,0 +1,57 @@
+Pivot Tables - Bring convenience or Create mess
+
+Pivot (pronounced as /ˈpɪvət/ <link???>) tables are commonly used tools to obtain a summary of some data. This handy tool allows creating reports easily. Yet it comes with cost.
+
+Advantages of Pivot Tables
+1. Pivot tables can create summaries quickly with desired dimensions and filters, which can be adjusted easily.
+2. It takes a short period of time to generate pivot tables, when compared with using formulas for the same purpose.
+3. Operations such as Sum, Count, Average of values can be obtained.
+4. Pivot Tables can be used as the basis for charts (2007 version onwards)
+5. Pivot Tables can take input from various sources including worksheet data, databases (Access / Oracle), OLAP cube
+
+Disadvantages of Pivot Tables
+1. Pivot Tables does not refresh automatically upon changes in underlying data. It requires manual refresh.
+2. With the need of manual refresh, there is no guarantee on the correctness of pivot table results.
+3. The layout (positions of items) in a pivot table can change due to alterations in dimension attributes and report filters.
+4. Other formula does not auto-adjust when the positions of items change. (While the default Pivot Table formula GETPIVOTDATA has a clumsy hard-to-read syntax)
+5. There are no easy ways to add all columns to the pivot table at once. VBA is the only solution.
+6. Hidden elements can exist in a pivot table which are more difficult to understand. Examples are calculated items and group items.
+
+Tips on using Pivot Tables
+1. The use of pivot tables is consistent with the principle of putting all the same kind of data in one single worksheet (e.g. lapsed policies of each month). Pivot table can be created and the monthly trend can be seen easily.
+2. Classic PivotTable Layout is often more useful.
+<screenshot> (RightClick + O + Shift Tab + left/right arrow keys + Alt+L)
+3. Since Excel 2010 version, it is possible to show all repeated item labels. This allow easier post-processing using formulas.
+<screenshot> (Alt + J + Y + P + R)
+4. The file size of an Excel file can be reduced by turning off "Save Data With Table Layout" option. This will speed up the saving process and reduce the file size but slow down the refresh speed. Further Reference: http://support.microsoft.com/kb/104308
+<screenshot> (RightClick + O + Shift Tab + ??)
+5. Avoid multiple pivot tables on the same worksheet. Putting multiple pivot tables together may lead to collision which needs resolutions.
+6. When a filter in the pivot table is applied to select only certain values, Excel does not automatically select any newly appeared items upon refresh.
+7. All historical values are retained in the filters even if they are absent in the latest refresh. To avoid it, go to "PivotTable Options" => "Data" Tab => set "Retain items deleted from the data source" to "None".
+
+Related Hotkeys
+These hotkeys can be invoked when the active cell is on a PivotTable. For the hotkeys about filtering, please refer to the article about Filters (not written yet).
+[table]
+Hotkey,Description
+Alt + D + P + Alt+F,Create Pivot Table on a new worksheet with the selected data
+Right Click + R,Refresh PivotTable
+Right Click + O,PivotTable Options
+Right Click + N,Pivot Field Settings
+Right Click + B,Toggle Field Subtotals
+Alt + J + Y + P + R,PivotTable => Design Tab => Report Layout => Repeat All Item Labels
+Alt + J + T + I + D,Change Data Sources
+Alt + A + P,Connection Properties
+[/table]
+
+
+Conclusion - Pivot Tables: To use, or not to use?
+1. While pivot table is a powerful tool, Excel's limitation makes it less powerful than it could be.
+2. If a full report is necessary, it is justifiable to use pivot tables.
+3. If pivot table is used, please make sure relevant checks are included to ensure the consistency between the pivot table results and the underlying data.
+4. If the dimensions of interest are not likely to change and the figures to view are not too much, one can consider using plain Excel formula (SUMIF, COUNTIF) instead of pivot tables.
+
+Further Readings:
+1. Group Items in a PivotTable report: http://office.microsoft.com/en-001/excel-help/group-items-in-a-pivottable-report-HP010175903.aspx
+2. Calculated Fields and Calculated Items: http://www.databison.com/calculated-field-and-calculated-items-in-a-pivot-table/
+3. Optimizing PivotTable Performance: http://support.microsoft.com/kb/104308
+4. PivotChart Reports: http://office.microsoft.com/en-001/excel-help/overview-of-pivottable-and-pivotchart-reports-HP010177384.aspx

@@ -1,0 +1,29 @@
+A slow workbook results from poorly written formula. Most of which are lookup formula. This article will show you how data sorting can help. You will be surprised how much faster your workbook can be.
+Examples of poorly written functions
+
+The majority of such functions are those requiring Excel to scan the full range one by one or having repeated calculations.
+A. avoid scanning the full range one by one
+Examples
+1. =VLOOKUP(A3, $B$2:$H$10000, 3, FALSE)
+2. =MATCH(A3, $B$2:$B$10000, 0)
+3. =COUNTIF($B2:$B10000, A3)
+Solutions
+
+
+having repeated calculations:
+1. =IF(ISERROR(VLOOKUP(A3, $B$2:$H$10000, 3, FALSE)), 0, VLOOKUP(A3, $B$2:$H$10000, 3, FALSE))
+This formula duplicates the number of calculations needed.
+Correct way:
+Cell J3: =VLOOKUP(A3, $B$2:$H$10000, 3, FALSE)
+         or even better: =MATCH(A3, $B$2:$B$10000, 0) Please read the article xxx for why VLOOKUP should not be used.
+Cell K3: =IF(ISNA(J3), 0, J3)
+2. Cell  1: =VLOOKUP($A3, $B$2:$H$10000, 3, FALSE)
+Cell 2: =VLOOKUP($A3, $B$2:$H$10000, 5, FALSE)
+Cell 3: =VLOOKUP($A3, $B$2:$H$10000, 8, FALSE)
+The same key is searched in the same range for multiple times
+Correct way:
+Cell J3: =MATCH($A3, $B$2:$B$10000 0)
+Cell 1: =INDEX($D$2:$D$10000, $J3)
+Cell 2: =INDEX($F$2:$F$10000, $J3)
+Cell 3: =INDEX($I$2:$I$10000, $J3)
+Such set of formula only require one search over the range  $B$2:$B$10000, which reduces the calculation time. The reduction can be very significant When the number of columns to be extracted from the referenced range is large.

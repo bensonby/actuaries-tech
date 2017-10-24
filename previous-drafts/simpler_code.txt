@@ -1,0 +1,60 @@
+Simpler Code
+Ways to shorter, easier to understand codes
+
+1. Avoid deeply nested loops
+Solution 1: use of continue or break
+Solution 2: wrap the code into functions for modulization (refer to lesson X)?
+
+Exhibit 1 (use of Continue / Break)
+For i = 1 to last_row
+  n = Cells(i, 3).Value
+  x = Cells(i, 2).Value
+  If n>0 Then
+    Cells(i, 5).Value = 'level 1'
+    'do something here
+    'a lot of things
+    'b c d e f 
+    'a b c d e
+    If x/n>0.2 Then
+      Cells(i, 6).Value = 'level 2'
+      If x<500 Then
+        Cells(i, 7).Value = 'level 3'
+      End If
+    Else
+      Cells(i, 6).Value = ''
+    End If
+  Else
+    Cells(i, 5).Value = 'nothing'
+  End If
+Next i
+    
+Exhibit 1b
+For i = 1 to last_row
+  n = Cells(i, 3).Value
+  x = Cells(i, 2).Value
+  If n<0 Then
+    Cells(i, 5).Value = 'nothing'
+    Goto next_i
+  End If
+  Cells(i, 5).Value = 'level 1'
+  If x/n <= 0.2 Then
+    Cells(i, 6).Value = ''
+    Goto next_i
+  End If
+  Cells(i, 6).Value = 'level 2'
+  If x >= 500 Then
+    Goto next_i
+  End If
+  Cells(i, 7).Value = 'level 3'
+  next_i:
+Next i
+
+Exhibit 2 Use of functions (many different if conditions)
+For i = 1 to last_row
+  If Cells(i, 1).Value > 0 Then
+    If Cells(i, 2).Value / Cells(i, 1).Value > 0.3 Then
+      
+  
+Next i
+
+Exhibit 3 (No Range.Select or Worksheet.Activate)

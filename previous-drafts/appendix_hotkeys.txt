@@ -1,0 +1,168 @@
+Introduction
+Hotkeys are the key to fast Excel manipulation. People who work with Excel all day know quite a few of the shortcuts available. But I bet, most of them do not know all the hotkeys I list below. Try to make use of all of them and think about them. You will know when you should use them.
+
+Memorizing hotkeys
+Do not treat the list of hotkeys as any kind of exam material and thus recite them. There is no exam on them. Instead, find the hotkey you need, and memorize it when use it. You will be able to memorize them as we use them for several times.
+
+Changes from pre-2003 version to post-2007
+The menu designs of Excel undergoes great changes from 2003 version to 2007 version. Since I first "play" with Excel 2003 version and move towards 2007 version, all the hotkeys I used commonly are based in 2003 version and can be used in 2007 version as well. (2007 version has yet another set of hotkeys in the menu, press Alt to view them all. But my advice is to stick with the 2003 version because many companies still use the pre-2007 versions)
+
+List of Hotkeys
+Because of the different skill levels with Excel, I have divided the hotkeys into 3 levels with different categories.
+
+(All use key images instead of plain text?)
+description: full form of letters with underline
+File and Worksheets
+1	Ctrl+N
+1	Ctrl+O
+1	Ctrl+S
+2 F12
+1	Ctrl+P
+1	Ctrl+F4
+	Alt+F4
+1	Ctrl+Tab
+1	Ctrl+Shift+Tab
+1	Ctrl(+Shift)/Alt+Page Down
+1	Ctrl(+Shift)+Page Up
+1	F9
+2	Shift+F9
+2	Ctrl+Alt+F9 (confirm)
+3	Shift+F11 or Alt+I+W
+3	Alt+E+L
+3 Alt+E+M (add Alt+C)
+3 Alt+O+H+R
+3	Alt+O+H+H
+3	Alt+O+H+U
+3	Alt+T+P+W
+3	Alt+T+P+P
+3	Alt+E+K
+3 Alt+P+R+S or Alt+F+T+S
+3 Ctrl+F2
+
+Clipboard
+1	Ctrl+C
+1	Ctrl+X
+1	Ctrl+V/Enter (note the difference)
+2	Alt+E+S+V (right click+...)
+2	Alt+E+S+T (right click+...)
+2	Alt+E+S+F
+3	Alt+E+S+W
+3	Alt+E+S+M
+3	Alt+E+S+C
+3		Add
+3		Divide
+3		Subtract
+3	Alt+E+S+L	Copy as Link
+
+Cell and Formula Editing/Formatting
+1 F2
+1 F4
+1	Ctrl+Z
+1	Ctrl+Y
+1	Ctrl+B
+1	Ctrl+I
+1	Ctrl+U
+1 Ctrl+K
+1	Ctrl+1 +word wrap, merge cell, center across selections
+2	Ctrl+D (check if it functions when only one single cell is selected for old excel versions) or Ctrl+>??
+2	Ctrl+R or Ctrl+< ??
+2 Alt+O+D
+3	Alt+E+I+L
+3	Alt+E+I+U
+3	Alt+E+I+S
+3	Ctrl+Shift+~
+3	Ctrl+Shift+!
+3	Ctrl+Shift+@
+3	Ctrl+Shift+#
+3	Ctrl+Shift+$
+3	Ctrl+Shift+%
+3	Ctrl+Shift+^
+3	Ctrl+Shift+&
+3	Ctrl+Shift+_
+3 Alt+H+0
+3 Alt+H+9
+3 Alt+H+J >=2007
+Alt+O+C+A
+Alt+O+C+W
+Alt+O+R+E
+Ctrl+Alt(+Shift)+Tab
+Ctrl+;
+Ctrl+:
+Ctrl++
+Ctrl+-
+
+Cell Search and Navigation
+Ctrl(+Shift)+Home/End
+Ctrl+Space
+Shift+Space
+2	Ctrl+A (or Ctrl+Shift+*)
+Alt+V+Z (add 7, 1, 0, 5, Alt+C)
+3	Ctrl+.
+3	Ctr+[
+3	Ctrl+]
+3	Alt+M+P
+3	Alt+M+D
+3	Ctrl+9
+3	Ctrl+Shift+9
+3	Ctrl+0
+3	Ctrl+Shift+0
+3	Alt+D+G+G
+3 (Shift+)Tab/Enter upon selection
+3 Ctrl+`
+
+1	Ctrl+F
+1	Ctrl+H
+1 F5 or Ctrl+G
+Ctrl+F3
+Alt+D+G+G
+Ctrl+9, 0
+1 Alt+W+F(+F/Enter)
+
+Tools
+Alt+D+P (+F)
+Alt+T+I
+Alt+D+L
+
+Sorting
+Alt+D+S
++...
+
+Protection
+Alt+T+P+W
+Alt+T+P+P
+
+Calculation
+F9
+Shift+F9
+Ctrl+H = Tab = Enter
+Ctrl+Alt+F9
+Alt+T+O Down/F Alt+A or Alt+?
+
+Filter
+Alt+D+F+(F/Enter) or Ctrl+Shift+L
+Alt+Down
++F+E/Enter
++I
++F+A
++F+I
++F+Left+Down or Up x2 or 3 or Down x2
++Space
++C
+Alt+A+C
+
+Comments
+Shift+F2
+Right click+O+O+Enter
+Right click+S
+Right click+M
+
+VBA
+Ctrl+F11
+Alt+T+M+R
+
+-- Non excel, for reference
+Win+R
+Win+R, Paste the path, EnterRun a file or open a folder given the path
+Win+E
+Win+Pause
+Win+L

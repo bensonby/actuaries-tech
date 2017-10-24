@@ -1,0 +1,7 @@
+I have been an enthusiastist)? about computer softwares and programming for a decade. Through writing numerous console programs and web applications, together with working experience as a programmer, I have learnt how to write a good program - not only doing the job right but also doing the job in a readable and maintenable way.
+Studying actuarial science in the university, I have been working as an actuarial analyst for more than a year, most of the time using Excel and VBA. Despite the short period of time, I have seen numerous erroneous)? Excel workbooks and poorly written VBA scripts. They all originated from poor workbook design and programming style.
+Most of the scripts or workbooks I have seen are not up to a good standard. With my experience and encounters in the working experience, I hope to share with you all some good habits and correct ways about building spreadsheets.
+Some of you may believe you already have a very good grasp of skills in Excel and VBA. I still encourage you to read through the chapters - I am trying my best to keep them short! They will allow you to reflect your design style and solidate)? your skills. In addition you may not know some of the skills in this book!
+If you have any opinions about the book, feel free to contact me via bensonby@gmail.com. Have fun reading this!
+
+Benson 2011-05-30

@@ -1,0 +1,22 @@
+Separation of Logic and Layout
+
+Introduction
+Model-view-controller (MVC), first described by Trygve Reenskaug in 1979, is an architectural pattern widely used in software engineering. To say in simple words, one of MVC's virtue is the separation of business logic and presentation layer, which could reduce the complexity in architectural design and to increase flexibility and maintability of code. Either the layout or the business logic can be changed without affecting the other.
+Excel's logic and layout dependency
+With the feature of using formula in cells, Excel can be considered as a programming interface, allowing logic to be built in and output to be shown. In this way we can regard the formula as the business logic, and the placement of cells in the workbook as the presentation layer.
+Here the problem comes. The basic design of Excel makes the business logic and layout largely dependent of each other, making the separation difficult.
+As a functional workbook, it should work fine even any cell is moved or any column is inserted at any place. Excel already does a great job in the automatic adjustment, but there are still many cases of failures.
+Example 1 - VLOOKUP
+The third attribute of the VLOOKUP function is a simple example. When the column of the table is moved, the function will fail because the column number does not adjust to the change automatically. Some people try to avoid this problem by using a number above the column. But this is not the best solution. (This will be explained in the next article).
+Example 2 - INDIRECT
+The INDIRECT function fails when any kind of layout changes is made,  because the INDIRECT function accepts a string, not a cell reference. The string will never adapt to the layout change automatically.
+Example 3 - Pivot Tables
+When a cell refers to the values in a pivot table using the ordinary way (A1, C5, etc.), these cell references do not change automatically when the layout of the pivot table is changed, e.g. a new field is added.
+Example 4 - Data Tables
+Excel specifies a format used for data tables. Formula must be placed in the designated cells for data tables to work properly. In such way the logic and layout are closely tied together and cannot be separated.
+Example 5 - VBA
+VBA programs are the most horrible places having such problems. Many VBA programs are so poorly written that a) inserting/deleting rows and columns, or b) simply moving cells and renaming worksheets, make them failed
+
+Summary
+The grid layout and the labeling of rows and columns (e.g. a cell is called E9) are great obstacles for good stability, readability and maintainability of the spreadsheets. They make the separation of logic and layout so difficult. Solutions to the above issues will be discussed in the upcoming articles.
+The key concept is to reduce the interdependency between logic and layout in Excel. It will make our life with Excel much easier. For programmers, such concept is even more crucial when writing code.

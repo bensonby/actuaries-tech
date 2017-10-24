@@ -1,0 +1,8 @@
+Modulization revisited
+No spaghetti code
+?? use this article or not?
+
+As you start to modulize your program, a common thing to decide is whether to put the code in a new function.
+Improper modulization results in "Spaghetti code". Spaghetti code means... (add definition of it)? Functions are not dependent, and they interact in a messy way where dependence exists even for largely separated modules.
+[Exhibit: Spaghetti code]
+A more sophiscated example in Java can be found in: , where the first code appears to be modulized but it is not good enough in readability, structure, and ease of maintenance and enhancement.

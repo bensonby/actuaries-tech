@@ -1,0 +1,15 @@
+DRY in worksheet formula
+
+The DRY principle applies to cell formula as well.
+[Exhibit 1]
+=IF(A1=3, VLOOKUP($D$1, data!$A$1:$BZ$2400, 35, FALSE), VLOOKUP($D$1, data!$A$1:$BZ$2400, 36, FALSE))
+[Exhibit 2]
+=VLOOKUP($D$1, data!$A$1:$BZ$2400, IF(A1=3, 35, 36), FALSE)
+
+The improved formulae is shorter, easier to understand and conforms to the DRY principle. Whenever the data range (data!$A$1:$BZ$2400) is changed, only one modification is necessary in Exhibit 2 instead of two in Exhibit 1.
+
+if(iserror(vlookup), 0, vlookup)
+
+vlookup on a column where there are a lot of repeated cobsecutive value , determine if same vAalue to eliminate vlookup
+
+a hardcoded number in formula also considered dry, because you have to manually fill down the formula - this action is equivalent to a replace in nature.

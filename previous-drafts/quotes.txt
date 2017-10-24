@@ -1,0 +1,2 @@
+my quotes:
+excel is a low level language without arrays and functions. and its support of defined variable name is limited - usually a memory address defined using row and column number is used for accessing variables. more importantly it dumps every variable to the screen

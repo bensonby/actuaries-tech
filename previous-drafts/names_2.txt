@@ -1,0 +1,23 @@
+Defining Names (Part 2)
+Importantance of names for VBA
+
+[Exhibit:
+Private Sub copy_inputs
+  Worksheets("Input").Range("C4:C6").Copy
+  Worksheets("Result").Range("A1").Paste
+End Sub
+]
+
+The layout-logic dependence poses even more serious threats when VBA is not well written. The example above shows a badly written VBA.
+The VBA fails whenever the cells are moved (either C4 to C6 or A1), or the worksheets are renamed - VBA does not adjust to movement of cells automatically. This kind of code creates the horrible dependence of logic and layout.
+Names must be applied to solve this kind of problem. By naming the ranges as RANGE_INPUTS and RANGE_RESULT_INPUTS respectively, the code becomes:
+[Exhibit:
+Private Sub copy_inputs
+  Range("RANGE_INPUTS").Copy
+  Range("RANGE_RESULT_INPUTS").Paste
+End Sub
+]
+
+Benefits:
+1. The VBA code is more vulnerable to layout manipulations
+2. The VBA code is easier to understand

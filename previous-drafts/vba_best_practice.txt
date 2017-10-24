@@ -1,0 +1,48 @@
+VBA - angel or devil?
+
+We often find workbooks that contain VBA. VBA is powerful for its ability to complete complex stuff when compared to MS Excel.
+However programming is not easy to learn.  Not many people are capable of reading or writing VBA. It creates significant risk.
+Think twice before writing a VBA program. Are there alternayives? Can better spreadsheet design solve the problem?
+
+What is a good VBA program
+1. It does not break no matter how you move cells and group of logical cells, insert or delete cells, rename worksheets.
+2. It properly handles errors, including but not limited to: absence of required cells, non-existence of files, error values of cells
+3. It does not do things beyond what the user reasonably expect. It should allow flexibility for the users. An example of is to range the cells of a particular cell: Unless there is a prompt for whether to overwrite
+4. Most importantly, it shows good programming style - proper modulization, clear function and variable names, clear variable scopes, reusable functions, short functions, error handling, good user interface
+
+Regarding the user interface, many people give meaningless name to the button to trigger a macro, such as "Run", "Generate", "Calculate" or even "Good Luck", where no further descriptions are present. It is a very bad design because the user cannot know what will be changed when they press the button. It confuses the user and fails to provide a sense of security, esp. we cannot undo a macro and macros are usually hardcoded. 
+A better description will be "run each record as ling as the policy no is not empty (by input thw policy no to tab "calc"), paste the calculated figures in tab "result" in the lower portion of that tab"
+
+move to top
+A macro button should have its actions described by words, listing the input and the output content and locations. It may ask the user to confirm the input.
+
+Use as little VBA as possible
+
+reasons:
+1. the percentages related to actuaries' ability to read and write
+2. Knowing barely to write a VBA that works is absolutely not a convincing reason for writing. You have to know how to write VBA well to do so
+3. It is very difficult to read a program written by someone else. We could end up finishing the job faster without VBA. 
+3. We should show care for people who cannot read VBA, and who cannot understand your complicated/poorly written program
+4. VBA program is not directly traceable.
+5. fundamental flaws in VBA, including (change to list) unclear error message when program fails to run, lack of supports in functional programming and OOP, poor default code editor (which does not allow even custom indentations). These make writing good programs even more difficult.
+
+Yet there can be a lot of cases where VBA is the only solution, or there are no satisfactort Excel formula possible to complete the task. VBA program has to be used in those cases.
+
+Two most common cases of using VBA
+(i should have typed them..)
+Therefore I have written a library. It should keep code short, simple and clean
+
+Best Practice in VBA
+1. Use a separate module to load all input values from the spreadsheet??
+2. Give meaningful names to all the buttons and cells used
+3. Use the status bar to prompt running status
+4. Restore all settings to the original state
+5. Try to keep your functions within 10 lines. This is an indicator of a clear and reusable program.
+6. Avoid Select, ActiveSheet, etc. It can avoid clumsy codes and make codes clean
+7. Make sure you write reusable functions, such as a function to extract the folder path given a full file name. 
+8. use meaningful variable names and function names, do not force others to guess what the variables or functions are. Together with moduisation, a good VBA program should have nearly no comments at all.
+
+Conclusion
+Although many can be done using VBA, it should not be used extensively because we are not proficient enough in writing good programs.
+If VBA is used in a complicated way without proper testing and good programming style,  it creates a huge automation process, it creates critical problem in modifying, auditing, checking and tracing the 
+file.

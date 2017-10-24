@@ -1,0 +1,57 @@
+Workbook Calculation Speed
+Manual Calculation? Slow Workbook?
+
+introduction
+Regatding the calculation mode in Excel, some people use automatic mode all the time, while some use manual mode all the time.
+My advice is: use automatic mode all the time!
+
+Reason of people using manual mode
+
+Why isn't it a valid reason?
+
+What are the problems with manual calculation mode?
+
+Some tips to speed up calculation
+
+more disaster: the workbook causes other users to turn to manual without they noticing..
+--any details from microsoft?
+-- so it affects the work of others!
+
+[Exhibit: 
+1. manual calculation option dialog
+2. calculating: 10%
+]
+
+Excel is often used for the implementation of complex model calculations, in which a large amount of data and formula are present. Workbooks of Tens of megabytes are definitely not uncommon in the workplace. The complex logic results in a long computation time and exerts pressure on the computer stability, esp. RAM. For this reason, many choose to set the calculation mode of Excel to be MANUAL.
+Despite the lower probability of freezing the computer, it simply increases the chance of making mistakes because of the out-to-date values in the workbook.
+There is a option "Recalculate before save" available as a remedy of the problem, but it only (不治本)?. The root of the problem is the poor and inefficient workbook design which makes the calculation slow.
+
+Here I list out 4)? tips as some guidelines for you to boost up the calculation speed.
+** verify how much they are faster!! **
+1. Data Sorting
+some functions can utilize the sorted "feature" of the data range. Examples are MATCH, LOOKUP and VLOOKUP. If the amount of data is large and frequent searching (on the same data range) is required, sorting can significantly boost up the calculation speed.
+2. Duplicated calculations
+The most common type of duplicated calculation is like the following formulae:
+[E1] =IF(ISERROR(VLOOKUP(B1, $A$1:$F$500, 5, FALSE)), 0, VLOOKUP(B1, $A$1:$F$500, 5, FALSE))
+This formulae evaluates the VLOOKUP part twice when it gives the result. The solution is simply to break them into two cells as shown below.
+[E1] =VLOOKUP(D1, $A$1:$B$500, 2, FALSE)     [F1] =IF(ISERROR(E1), 0, E1)
+While the best solution is to utilize the sorted range to further eliminate the last attribute FALSE.
+3. Volatile functions
+As I have mentioned in another article ?name, volatile functions significantly slow down workbook calculation
+4. Unnecessary calculations
+Imagine a workbook projecting the future cashflows of an insurance policy. In the calculation, premium rates of each policy year are obtained from a large excel table. Also a policy may have a specific teem.  A poor calculation tdmplate will read in all premium ratea rehardless of they are actually used or not. while a good template only attempts to obtain the premium rates when the policy is still in force.
+5. avoid too many formula which requires calculation with a large range, e.g. SUMPRODUCT, COUNTIF
+6. consider other tools if the data volume is very large or the calculations are too complex, you may need to use a darabase or a programming language to accomplish the task.
+
+
+
+
+
+
+
+summary
+Please set your calculation mode to automatic, and keep your workbook calculation fast and simple. Do not create a slow workbook with poor formula design and set the calculation mode to manual - it is not a real solution to the long calculation time problem.
+-- vlookup error, countif error, whatever
+-- volatile functions
+-- unnecessary calculations
+-- use database for huge amount of data (not using the right tool)

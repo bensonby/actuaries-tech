@@ -1,0 +1,13 @@
+VLOOKUP and INDEX: first step to reduce logic-layout dependence
+Avoid fixed column number in lookup functions
+
+We have learnt the problem of dependence in layout and logic. One of the most commonly made mistake is the misuse of vlookup. It is a function very well known because of... sorry, not really that useful - in many cases it is not needed. If possible, please try to avoid the use of vlookup. A typical incorrect use of VLOOKUP is illustrated below:
+[exhibit]
+The formulae VLOOKUP(A2, $C$3:$M$19, 8, FALSE) looks for the 8th column as the desired value. What? The eighth? Obviously the formulae fails to work whenever the column is moved, an extra column is added or a column is deleted in between.
+Let's consider the following example.
+[exhibit 2]
+This example gives the correct approach to obtain that value. The key is to have no fixed (hardcoded) numbers in formula. LOOKUP is not as "famous" as VLOOKUP but it is definitely more useful. The formulae is LOOKUP(A2,$C$3:$C$19, $J$3:$J$19). It is no longer necessary to count where the 8th column is. More importantly, the formulae gives the correct result even if the columns are moved.
+Another benefit is of using LOOKUP instead of VLOOKUP is due to the possible "negative index" to be used in VLOOKUP. The VLOOKUP function limits the "value)? array to be at the right of the searching criterion (Why?). LOOKUP gets rid of this by directly referencing the result vector)?.
+
+The same case also applies for the functions HLOOKUP and INDEX. Any row number and column number should not be fixed column numbers.
+You may be shocked to see how many times you have used fixed numbers in formula for lookup purpose.

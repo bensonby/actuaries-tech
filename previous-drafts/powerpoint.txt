@@ -1,0 +1,43 @@
+PowerPoint skill
+vba library + article
+links 
+chart formatting - menu options with corresponding effects on charts
+defined names
+
+advanced topics
+shared workbooks
+connection to database
+table
+
+Powerpoint skills 
+Most of us probably had some lessons on Powerpoint before in colleges.
+ However those you learnt are often not what we should learn about presentations.
+ 
+1. Powerpoint is for presentation, not as a document with paragraphs.
+
+2. As few words as possible
+
+3. Make sure the audience follow the agenda
+
+4. Use slide master instead of slide-by-slide customizations
+
+5. Use clip arts only when they accurately represent the ideas
+2007 clip arts is boring
+create custom ones
+
+6. Utilize dual screen setup
+
+7. Attachments (videos)
+
+
+downloading attachments first, avoid connection to internet just for view of documents
+notice on the font size and clarity, especially on attachments
+know the correct way to switch to other pages in powerpoint
+ensure the audience can follow the flow of your presentation, know where you are
+-- although an agenda is shown, audience will forget it soon
+-- even if you add the flow in every page, audience can get lost easily when you dig into sub-sections, sub-sub-sections and sub-sub-sub-sections
+Whenever you use short forms or technical terms, make sure you have considered the audience's background. Explain clearly if necessary
+Think about how people talk without presentation softwares. Powerpoint is not used to hold your content, but to ASSIST your presentation.
+The content should be typed neatly using a word processor such as MS Word. Powerpoint is surely not for that purpose.
+Do not embed videos in your presentation as it makes your powerpoint unnecessarily large. Videos should be shown separately
+Do not include useless images, icons or photos. It makes no sense. Simple is beauty

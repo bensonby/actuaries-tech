@@ -1,0 +1,73 @@
+PowerPoint skill
+vba library + article
+links 
+chart formatting - menu options with corresponding effects on charts
+defined names
+
+advanced topics
+shared workbooks
+connection to database
+table
+
+Powerpoint skills 
+Most of us probably had some lessons on Powerpoint before in colleges.
+ However those you learnt are often not what we should learn about presentations.
+ 
+1. Powerpoint is for presentation, not as a document with paragraphs.
+
+2. As few words as possible
+Do not put all the content into the slides. As mentioned in the first point, slides only assist the preaentation.
+If all the words are put in the slides, the presenter is "useless"
+Or think in this way: as an audience, how many times have you been struggling to read the words or to listen to the speaker? 
+20 words are a suggested limit for each slide.
+
+3. Make sure the audience follow the agenda
+
+4. Use slide master instead of slide-by-slide customizations
+
+use PowerPoint templates which suit the topic and the style of the presentation. 
+the preset templates have been boring. Presenters should find new template on the internet or create custom ones.
+
+5. Use clip arts only when they accurately represent the ideas
+2007 clip arts is boring
+create custom ones
+clip art shapes can make sentences split into lines in an awkward way.
+
+
+6. Utilize dual screen setup
+If a dual screen setup is possible, the secondary non-projected screen can be used to show notes of the slides, previous and next frames, and the time elapsed of the presentation. 
+Such feature is available in the common presentation software 
+
+7. Attachments (videos)
+downloading attachments first,
+avoid connection to internet just for view of documents
+
+8. clarity of words and pictures 
+notice on the font size and clarity, especially on attachments
+avoid putting words at the bottom of the slides. The bottom part of the screen may be blocked by other audience.
+
+
+9. Right way to switch to a particular slide 
+In the Q&A sessions, the presenter often needs to refer to previous slides. 
+Searching through the slides does not appear pleasant to the audience.
+know the correct way to switch to other pages in powerpoint
+
+3.
+ensure the audience can follow the flow of your presentation, know where you are
+-- although an agenda is shown, audience will forget it soon
+-- even if you add the flow in every page, audience can get lost easily when you dig into sub-sections, sub-sub-sections and sub-sub-sub-sections
+
+10. Use of short forms and technical terms 
+Whenever you use short forms or technical terms, make sure you have considered the audience's background. Explain clearly if necessary
+
+1.
+Think about how people talk without presentation softwares. Powerpoint is not used to hold your content, but to ASSIST your presentation.
+The complete content should be typed neatly using a word processor such as MS Word. Powerpoint is surely not for that purpose.
+We don't separate content and paragraphs to frames in documents. It reduces the readability. 
+
+7.
+Do not embed videos in your presentation as it makes your powerpoint unnecessarily large. Videos should be shown separately
+(tbc)
+
+5.
+Do not include useless images, icons or photos. It makes no sense. Simple is beauty

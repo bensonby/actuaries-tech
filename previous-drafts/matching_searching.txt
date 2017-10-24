@@ -1,0 +1,5 @@
+ABOUT SEARCHING AND MATCHING
+There is a trade-off though. It lies in the difference between LOOKUP and VLOOKUP, especially when there is no matches. Below shows the implication of the corresponding arguments [source = techonthenet?)]
+In case you need to raise an error when the search criterion cannot be found (by using VLOOKUP with the last argument set as FALSE), LOOKUP cannot replace the function of VLOOKUP. A workaround is to check whether the search criterion exists by using COUNTIF (or whatever). Despite the more lengthy formula, it is worth for the potential break of the whole workbook. An example is shown below (3-b)?.
+If, for any reason, VLOOKUP must be used, there is yet another workaround: put numbers on top of the columns and replace the column number in VLOOKUP with that number. But an extra row of numbers have to be maintained. An example is shown above (3-c)?.
+

@@ -1,0 +1,34 @@
+Modular Approach
+The second programming principle
+
+[Exhibit:
+Sub Copy_inventory_data
+    //result worksheets variable
+
+    //excel set sys config
+
+    //read inputs (worksheet names)
+    //copy worksheets
+    //restore sys config
+End Sub
+]
+
+[Exhibit:
+//modular approach
+]
+
+You probably have heard of the term "modular approach" before. But only few of non-engineering students understand its importance.
+Exhibit A is the code without modulization (with some nice comments); Exhibit B is the code with modulization.
+They both do the task correctly, but Exhibit 1b is much better, because of the following reasons.
+1. (quote: check if correct) Good code is its own documentation (by ??)
+The seemingly nice comments in Exhibit ? are unnecessary when you read Exhibit ?. That is why the above saying comes. From Exhibit B, one can clearly know what the Sub is going to do: the 3 steps which are in 3 different sub-functions. From now on, don't bother to write any more those comments by <b>modulizing your code</b> and <b>giving them a nice name</b>.
+2. easier to maintain and read
+Each function is only responsible for its own stuff which is defined tightly (example using above) single responsiblity principle?
+It will be easier to read and understand by human because what the function does only specific things and will be shorter.
+When it comes to the time modification, it is much easier because only a smaller portion of code needs to be considered
+3. Reusable Code
+The reusable part refers to the sub-functions you have created. An obvious example is the two functions "" and "" in Exhibit ?. They are easily reusable in any of your other VBA code.
+3. Macroscopic view of the program code
+Once the un-modulized)? code (Copy_inventory_data) becomes long, e.g. spanning 150 lines, the program code is not clear enough even though comments are present - simply because they are too far away from each other and require substantial scrolling.
+By modulization, one can grasp the macroscopic view of the VBA procedure by reading the function names. Isn't it intuitive?
+

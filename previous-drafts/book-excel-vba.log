@@ -1,0 +1,119 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.30)  28 MAY 2011 15:25
+entering extended mode
+ %&-line parsing enabled.
+**book-excel-vba.tex
+(./book-excel-vba.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, pinyin, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/bk10.clo
+File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+
+! LaTeX Error: File `preamble.tex' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+No file book-excel-vba.aux.
+\openout1 = `book-excel-vba.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+\openout2 = `titlepg.aux'.
+
+No file titlepg.tex.
+\openout2 = `preface.aux'.
+
+No file preface.tex.
+\openout2 = `other.aux'.
+
+No file other.tex.
+\openout2 = `introduction.aux'.
+
+(./introduction.tex
+Chapter 1.
+) [1
+
+
+
+
+
+
+
+
+
+
+
+]
+\openout2 = `amslatex.aux'.
+
+
+No file amslatex.tex.
+\openout2 = `tools.aux'.
+
+No file tools.tex.
+\openout2 = `history.aux'.
+
+No file history.tex.
+\openout2 = `tables.aux'.
+
+No file tables.tex.
+[2
+
+
+
+
+
+
+
+
+
+
+]
+\openout2 = `bibliography.aux'.
+
+
+No file bibliography.tex.
+\openout2 = `index.aux'.
+
+No file index.tex.
+(./book-excel-vba.aux (./titlepg.aux) (./preface.aux) (./other.aux)
+(./introduction.aux) (./amslatex.aux) (./tools.aux) (./history.aux)
+(./tables.aux) (./bibliography.aux) (./index.aux)) ) 
+Here is how much of TeX's memory you used:
+ 260 strings out of 495047
+ 2812 string characters out of 1181960
+ 46441 words of memory out of 3000000
+ 3495 multiletter control sequences out of 15000+50000
+ 4906 words of font info for 18 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 23i,4n,17p,211b,145s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on book-excel-vba.dvi (2 pages, 668 bytes).

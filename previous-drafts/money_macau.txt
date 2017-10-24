@@ -1,0 +1,12 @@
+40 taxi
+60 in 262 蝦子
+
+
+23 taxi to sheung wan
+20 7-11 at sheung wan
+838 overall trip
+17 11/f handletter
+20 money biscuit
+150 handletters
+
+9.9 443.1

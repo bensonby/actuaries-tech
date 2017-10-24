@@ -1,0 +1,32 @@
+top mistakes
+7. not stating the currency, whether the amount has been converted to HKD, or is of local currency
+eg. a) in immediate top
+b) as number format
+c) (bad) a line above/below
+
+4. not stating source of info
+illustrations
+whether file, sql, person, email
+with color indicating other parts as formula
+
+2.
+bad flow / order / organization of spreadsheets
+put/distrivute stuff logically in spreadsheets
+good names, colors, orders
+
+9. hardcoded numbers with no explanations
+It is a common mistake. Nobody will 
+ LO
+ 
+8. same kind of data in different worksheets
+
+6. excessive use of short forms w/o explanations
+Only the most trivial short forms should be used. Even though a short form is widely recognized within a company, it does not take significant time or space to type the full name instead. It ensures any future readers can understand easily.
+
+10.  using vlookup/hlookup
+
+5. using indirect
+
+3. formula not written for human to read
+
+1. explain excel using step-by-step approach

@@ -1,0 +1,54 @@
+Excel File Formats and File Extensions
+
+If you understand the concepts of file extensions, you can skip this part and read about the Excel file formats.
+
+Concept of file extensions
+Examples of File extensions are mp3, doc, jpg, png. They are part of a filename which tell the formats of the file. It is essential because each program only recognizes several types of files.
+
+The concept can be illustrated by the following: Sam and Tom both develop their own drawing programs. To represent an image file containing a red circle, they used different methods. Sam's program, SamDraw, saves the file redcircle.sam with content <circle color="#ff0000" radius="2" />. While Tom's program, TomPaint, saves the file redcircle.tom with content
+circle/red/2.
+
+Each of the program is written to handle only their specific type of image files. Thus, the extension .sam is associated with SamDraw, and the extension .tom is associated with TomPaint. When
+
+If you change the file name from redcircle.tom to redcircle.sam, SamDraw treat it as in the Sam's format but the program will fail to interpret the file because its file content is not in Sam's format. It is still in Tom's format. It cheated the system causing it to use SamDraw to open a file in Tom's format.
+
+By default, file extensions that are recognized by at least one program are hidden. It makes viewing and editing extensions difficult. 
+
+how to show file extensions
+
+File formats
+.xls Excel 97-03 workbook, with or without macro 65536 rows 256 columns (IV)
+.xlsx Excel 2007, 2010 workbook, without macro
+a zip file beware on ie6 (what? u r still using ie6?)
+.xlsm Excel 2007, 2010 workbook, with macro
+.xlsb Excel 2007, 2010 workbook, smaller file size than xlsx, not zip file, can contain macro?
+.csv plain text file. When interpreted by Excel, one line is one row; columns or fields are separated (delimited) by comma; the values can be optionally enclosed by double quote ".
+csv format is suitable for plain data, which can be large in size.
+Caution on csv format:
+1. no formula is preserved
+2. the dates in csv, when converted from Excel, are in the format specified by Excel cell formatting, or system default format if not specified
+how about other formats? percentages, currency, time..
+
+file size
+delete row fornatting and column formatting
+xlsx smaller than xls
+
+
+xla Excel add ins
+
+useful new features
+2007: more rows and columns
+default conditional formatting
+filtering by color
+interface change
+
+2010: pivot table repeat labels
+create custom tabs in ribbon
+64bit excel
+2013:
+
+flaws
+tables
+name manager
+links with network drive or path
+shared workbook

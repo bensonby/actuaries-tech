@@ -1,0 +1,74 @@
+variable Scopes and cell dependencies
+
+topic
+variable scope control and present them
+tracing pre/dependents and thus why vlookup or hlookup is bad
+-- and cannot trace multiple cells at the same time.
+dialog not long enpugh causing problems
+things should be put at what they are used in, e.g.
+data validation list on a specific column
+exchange rates to be applied in one worksheet
+
+formula shorter and easier to read, because formula refers to cells in the same worksheet
+easier to know where a cell or a group of cellsvare used
+easier to trace the dependent cells
+
+complicated cell reference first, for Ctrl+[
+
+Checks
+Introduction
+Excel spreadsheets are fragile. Errors can occur easily, especially when there are numerous sources of numbers and information. Thus, propers checks are important to prevent spreadsheet errors.
+
+Types of errors
+Errors can occur due to
+1. Human errors, e.g. forgot to fill down formula according to data; total figures not including all data rows.
+2. Formula logic errors, e.g. using ? to calculate the next premium payment date of a policy which pays premium quarterly, ignoring the case of 2013-2-30
+3. Data error, e.g. nonsense policy effective date of 1890-02-28
+4. VBA macro errors, e.g. macro using a specified worksheet named "exchange_rates" but it is removed
+
+Types of checks
+Checks can be categorized into two types: "critical checks"?? and reasonability checks.
+
+"Critical checks"???!!!
+Most critical errors are inconsistent total in different spreadsheet.
+1. Check for total when the same set of numbers are rearranged or processed such that the same set of numbers appear in two worksheets.
+<Example>
+Remarks
+a. total should be always at the top, never the bottom.
+b. in the checking cell, it is better to put the more distant cell first. It allows users to reach the more distant cell directly by pressing Ctrl+[. e.g. use ?? instead of ??.
+2. Checks for formula which fail to include the full range of data.
+Presumption: never use the whole column or row A:A, 9:9 in formula (why?? ozgrid).
+When we write sum(C9:C200), we assume the data can be at most up to the 200th row in the spreadsheet. If the data exceeds the 200th row, a proper check should reveal the error.
+Example: 
+Remarks
+a. You might use a range that is far more than enough to avoid the problem, but some day a user may delete all extra rows from row 200 to 10000, which reduces the range to 200th row.
+b. This check is critical when using MATCH or VLOOKUP with sorted data where the formula requires exact range.
+
+3. Data validation
+Simple validation has to be done on the data, e.g. whether key information (e.g. sex of insured of a policy) is missing or invalid; whether data is reasonable, e.g. issue age not matched with date of birth. While in some cases these errors can be caught because some formula in the spreadsheet returns errors such as #N/A!, it may be possible that no errors can be seen.
+
+Reasonability check
+The other kind of check compares the same amount across different time periods or products, where the trend should be smooth and consistent. If any unusual trend appears, it has to be explained in words.
+
+VBA macro check
+Ensuring an error-free macro isb practically impossible most of the time. as the saying goes:
+1. check if required workbook, worksheet and named ranges exist.
+2. check for cells having errors, especially those serve as an output
+3. check for altered layout if macro requires a specific layout. (though the macro is not well-written if it will break upon layout changes)
+
+Presentation of checks
+Check results are either numerical values, boolean values (true or false) or word explanations.
+1. Numerical values
+usually used for count of errors, e.g. count of missing policy effective date; or the difference of two consistent amounts. For numerical check result, it is common to treat a zero as error-free.
+
+2. Boolean values
+A TRUE or FALSE value can be used for "black-to-white" check such as to check whether the range in the formula is enough for the data.
+
+3. Word explanations
+Word explanations, e.g. for reasonability check, are hardcoded, but not formula. Thus the layout has to be considered more carefully. Otherwise when data order is altered upon update or changes, all the remarks and explanations will be off their intended places.
+<screenshot illustration>
+
+4. Summary of checks
+Create a page to list all checks. Even though all checks are present, they can be missed as they are everywhere. Therefore a summary of checks should be made. It can be put in the same page as the file outputs so it will not be missed. (Do not directly put all checks on that summary page, it makes the formula hard to read and understand. Things should appear in what they refer to)
+
+Many checks can be present even in a simple workbooks with a few worksheets.

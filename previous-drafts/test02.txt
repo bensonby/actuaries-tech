@@ -1,0 +1,8 @@
+test02
+formula draggable (no sub headings with empty rows)
+merged cells
+no checks
+no description of worksheet
+abbreviations
+calculations mixed with input and output
+empty rows between data (all should be filled)

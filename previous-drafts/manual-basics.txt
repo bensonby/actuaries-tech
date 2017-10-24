@@ -1,0 +1,110 @@
+(blank) means an empty cell with no content,
+("blank") means a cell with a formula evaluted as an empty string, e.g. =""
+
+Chapter 1
+Basic Knowledge about Excel
+
+The knowledge outlined in this chapter should not appear as new to you. They are listed here for completeness of this book. If you are not familiar with any of these, please try it out in Excel and consult Google. I am not going to explain them in details because they are basics for actuaries. I dont expect you will memorize all details of these basic functions and features, but you at least know their existence, i.e. you know what you can do
+
+A. functions
+sum
+product
+average
+min
+max
+
+abs
+ln
+log?
+mod
+floor
+trunc
+roundup
+rounddown
+pow
+
+sumproduct
+sumif
+countif
+counta
+sumifs(Excel 2007 only)
+countifs(Excel 2007 only)
+
+if
+iserror
+isna
+iferror(Excel 2007 only)
+
+
+date
+year
+month
+day
+today
+now
+eomonth
+datedif
+
+lookup
+vlookup
+hlookup
+match
+
+index
+offset
+indirect
+address
+row
+column
+transpose
+
+irr
+npv
+
+stddev
+norminv
+normdist
+correl
+rand
+
+advanced
+value
+text
+mmult
+
+B. formula editing
+effect of copying a formula to other cells
+usage of $ signs in formula
+
+C. Cell formats
+type of cell (number, percentage, text, currency, date)
+merge cells and wrap text
+setting row height and column widtg
+hide and unhide rows/columns/worksheets
+freeze panes
+
+utilities
+pivot table basics
+Auto-filter
+find and replace
+go to
+data validation
+conditional formatting
+
+file formats
+xls
+xlsx
+xlsm
+csv
+
+more chapters
+- dont hide worksheets
+  solution: large text box
+- worksheet names, colors, indicating flow
+- use of colors
+   not for logic
+   for showing diff sections
+   conditional formating: use with care
+add formula on wide data
+explanation at the appropriate place not far away
+do not use A:A in formula..

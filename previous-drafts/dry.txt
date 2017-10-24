@@ -1,0 +1,20 @@
+Don't Repeat Yourself (DRY)
+The first principle in programming
+
+Most of the people who know to write VBA do not know how to write good VBA code. A very basic law in programming is DRY (Don't Repeat Yourself). Code snippets like the one shown in Exhibit 1-a)? are not uncommon. Perhaps the writer is lazy to think or the writer thinks it is easy to understand.
+But it is no good at all.
+Flaws when you repeat yourself often:
+1. It is more difficult to modify the program. "Replace" function may not always do the job
+2. It is more difficult to read because the code is long and clumsy
+3. A slight modification may require a large number of modifications in different VBA modules
+
+We all want code that is one variable for all. The simplest relevant example is the worksheet's name or ID. Go and have a look at your recent macro, how many times the name or ID (e.g. "Sheet1") is repeated?
+
+The same principle applies to multiple statements (Example 3, 4)
+
+Example: worksheet name keeps repeating
+Example: looping, value = i & "_" & j & "_1" appears many times
+Example: copy different ranges -> paste transpose
+Example: for all worksheets, delete the first row and insert a new row between 2nd and 3rd
+
+
