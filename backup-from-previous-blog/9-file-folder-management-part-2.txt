@@ -1,0 +1,107 @@
+Excel for Actuaries #9 – File and Folder Management (Part 2)
+January 1, 2013 Benson No comments
+Introduction
+
+In the Part 2 of “File and Folder Management”, I will share about file name considerations, dates and time in file names, as well as version control.
+Duplicate information in full file path
+
+Imagine a file path like this:
+D:\reports\2012\2012Q3\lapse_reports_2012Q3.xls
+
+If you want to view the same file but for the year 2010, you have to modify the path three times.
+
+This is not a good practice in file and directory structure – Each piece of information should appear once and only once in the full path. As a most elegant design, the information already shown in the folder name needs not be repeated in the file name. It helps keep the file name short and clean while informative enough.
+
+However this is not the end of the story with MS Excel…
+File and Folder names considerations with MS Excel
+
+There are more to consider while you are (re-)naming Excel files.
+1. Opening files with the same name
+Error Dialog Box when opening two files with the same file name
+
+Error when opening two files with the same file name
+
+Excel does not allow opening simultaneously 2 files with the same file names (personally I don’t think it makes any sense. I believe Excel created this mess which is partially attributed to the use of external file links in formula. Probably all other programs allow that and do not have such problems).
+
+For more details on this issue, you may wish to have a look at Excel Blog: http://blogs.office.com/b/microsoft-excel/archive/2009/01/08/why-can-t-i-open-two-files-with-the-same-name.aspx
+
+In light of this, for the same type of MS Excel files, we have to make sure their names are unique. Otherwise it creates troubles when we want to open the files simultaneously for comparison. For example, for the unearned premium report of each month, we will include the month of that report in the file names even though the month may have been present in the folder path.
+D:\reports\2012_06\unearned_premium_report_2012_06.xls
+D:\reports\2012_07\unearned_premium_report_2012_07.xls
+
+You probably have noticed: this mechanism breaks the rules of duplication rule mentioned above. But we have to repeat the month in the file name to save the effort to deal with two identically named Excel files.
+Note
+
+If you have two identically named files and have to open them simultaneously without renaming the files, the solution is to open another instance of Excel Win+R "excel" Enter. By opening the Excel application again, you have two copies of Excel. These two copies work independently as if they are two separate programs. Thus you can use the extra copy to open a file with the same file name. The downside of this “solution” is: you cannot reference to any cells in the other Excel copy in your formula, such downside is critical when you are comparing the two files with the same name.
+2. Breaking links in Excel files
+
+Excel allows users to include external file links in the formula. Although it appears to be convenient for readers to directly know the source of the values and enable the presence of a dynamic link to another file, such feature leads to a high chance where the file link is broken due to the removal of the file referred to in the formula.
+
+When it comes to the time you want to rename a file, re-organize the folder structure, or change a file to a new version by giving a new name, the problem comes: you have to know clearly whether there are any other Excel files refer to any of the files you are dealing with. The file paths in those other files do not change automatically. If you break the links between the Excel files, it makes them harder to understand and create problems of audit.
+
+However it is hard to ensure that there are no files pointing to the particular file under renaming.
+
+Note: Excel tries to save external file links using relative address instead of absolute addresses. Therefore it is safe to move together interdependent files in the same folder to another one. For more details, please refer to Microsoft Support http://support.microsoft.com/kb/328440.
+
+[I will write an article on more details about Excel links in the future. I am not going to cover too much here.]
+Use of dates and time in file names
+
+Have you ever confused by a date 0912 in a file name or a document? [Is it 2012 Sept, 2009 Dec, 12th Sep of the current year or 9th Dec of the current year?]
+
+If you have encountered that, you should have known a better practice of putting dates in file names. Below are some guidelines to follow:
+
+    Always use 4-digit year in file names, e.g. use 2009 instead of 09)
+    Always use 2-digit numbers 01 to 12 to represent month; never use single-digit, e.g. 1; and never use letters JAN, FEB, etc.
+    Always represent a date and time in the order of Year -> Month -> Day -> Hour -> Minute -> Second, e.g. use 2012-09-23 instead of either 23-09-2012 or 09-23-2012
+    Use symbols such as hyphen “-” or underscore “_” to separate elements of a date or time. (Space is not preferred)
+
+Examples:
+
+    2012-09 represents September 2012
+    2011-11-12 represents 12th November 2011
+    1999-02-03T12:10 represents 3rd February 1999, 12:10
+
+When these few guidelines are followed, you can ensure that the files are listed in the correct chronological order when sorted. Nobody would love to see the orders of the files as in the below screenshots – finding the desired date is so difficult in the below cases!
+
+As a reference, you can refer to ISO 8601 (wiki link) for an international standard of representing dates and times.
+Two Examples of Bad Dates in Filenames
+
+Two Examples of Bad Dates in Filenames
+Version control
+
+Programmers have sophisticated reversion control softwares such as Subversion and Git. For Microsoft Office, the version control feature is very limited. Microsoft Word has some little part of features of version control; and.Microsoft Excel does not. Therefore we have to store separate versions as separate files.
+
+In an organization, there are 2 common methods to specify the file versions in the file name for version control. Here we take a file named Template.xls as an example to illustrate the two methods.
+Method 1
+
+The version number increases as new version is produced. The file with the largest version number is referred. (e.g. use Template_v03.xls instead of Template_v02.xls). Optionally a version number of FINAL can be used to indicate the final version of a file.
+
+This method is intuitive to understand. However any file dependencies have to be updated when the file name is updated upon the creation of a new version.
+Method 2
+
+The latest version is always named Template.xls. Previous versions are stored with their version numbers
+
+This method guarantees that the file to be opened is always at the same file path. However it is not as intuitive as the previous method.
+Version Control - Method 1
+
+Method 1
+Version Control - Method 2
+
+Method 2
+
+I do not have a solid preference on which method to use. It mostly depends on the existing practice in the organization. But there are still some guidelines to file naming to follow:
+
+    Always use 2-digit (or even 3-digit) version number in file names, starting with v01. It ensures that the files are sorted properly. (unless you are sure that the version number does not exceed 9, but how can you be sure?)
+    If possible, add a brief descriptive text after the version number to indicate the changes made to that version. It provides a clear summary of the key changes made to a file. (e.g. Premium_summary_v03_fixed_CI_rates.xls)
+    Use new versions often. It does not hurt to create new versions, unless the hard drive capacity is very limited.
+
+If you are looking for a more professional revision control system, you may wish to try TortoiseSVN which is based on Subversion. It has some support for MS Word and Excel files. However I haven’t tried it so I am not sure how well the functionality is.
+Conclusion
+
+By now you should know better about file path naming considerations (with Excel files or non-Excel files), date and time representations using standards to allow easy sorting and locating; and version controls to keep track of file changes.
+
+File management is the key for us to locate the files easily, understand the content in the files reliably without opening them. Do not underestimate the effect it brings. Badly designed file names and folder structures definitely cost you a lot, probably more than you have thought – which you can never know before you create a better file and folder structure.
+Reference
+
+    UW-Madison Research Data Services – File Naming and Versioning http://researchdata.wisc.edu/manage-your-data/file-naming-and-versioning/
+

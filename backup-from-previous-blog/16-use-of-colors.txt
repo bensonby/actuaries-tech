@@ -1,0 +1,110 @@
+(all images missing!)
+Excel for Actuaries #16 – Use of Colors
+Posted on October 5, 2013 by Benson	
+Introduction
+
+Coloring is a major tool in visual formatting. Given its wide-spread use in Excel, it is necessary to explain some principles regarding the use of colors.
+Principle 1 – Colors should not be the only indicator for business logic
+
+All kinds of business logic should not solely rely on the colors of cells. Business logic should be indicated by words in cells. Do recognize the fact that there are no simple built-in Excel functions related to colors, nor you can filter colors as conveniently as values.
+
+Colors are used for visual appeal only. A spreadsheet should still function well without the colors.
+Colors - Principle 1: Business logic not solely represented by colors
+
+Colors - Principle 1: Business logic not solely represented by colors
+Principle 2 – The same color means the same module/section or same type of data
+
+A common example in actuarial use is the separation of hardcoded data and formula.
+
+When there are a large number of columns involving formula, they should be categorized with different color representing different categories.
+
+Tips:
+
+    Always put the columns of the same category together
+    Avoid coloring the entire row or column. It is useless and the colors will be messed up easily.
+    Do not confuse this coloring method with the first principle. The colors of sections mentioned here do not imply business logic.
+
+Colors - Principle 2: Clearly Separate Sections by Colors
+
+Colors - Principle 2: Clearly Separate Sections by Colors
+Principle 3 – Use the same color only for cells that share the same formula.
+
+Usually we write formula that can be copied to other cells. In such case the same color should be used.
+
+Any exceptions should be clearly highlighted using a different color. One common example is a special initial value in a column.
+Colors - Principle 3: Only cells in the same color can be copied
+
+Colors - Principle 3: Only cells in the same color can be copied
+Principle 4 – Colors have their meanings
+
+Always follow the common meanings of colors in your spreadsheet, e.g.
+
+    Negative numbers displayed in Red; Positive in Black;
+    Errors indicated by Red cells
+    Unused or unimportant cells indicated by a grey background or grey text.
+
+Always follow any (reasonable) conventions used in the department, e.g.
+
+    Input cells denoted by red text over a yellow background with a larger font size
+    All titles/headings in a spreadsheet follow a specific font style.
+
+Principle 5 – Consistent color scheme
+
+A consistent set of colors should be used for any individual, possibly for the whole department.
+
+The default styles in Excel is a good start, which can enforce a unified style across spreadsheets.
+Colors - Principle 5: Default Styles are a good start to consistent styles
+
+Colors - Principle 5: Default Styles are a good start to consistent styles
+Principle 6 – Ensure a proper color contrast for printing
+
+The choice of colors is more restricted when the spreadsheet is to be printed in black & white. It is most often associated with charts.
+
+Either high contrast colors should be used, or shades and patterns should be used instead of colors in order to distinguish between the sections and the lines in charts.
+Colors - Principle 6: Use Patterns instead of Colors
+
+Colors - Principle 6: Use Patterns instead of Colors to Distinguish Different Lines
+Principle 7 – Avoid complicated conditional formats
+
+Conditional Formats allow changes in cell formats according to cell values or customized formula. However excessive or complicated uses of conditional formats will cause a significant impact to the calculation speed, as the Microsoft article states:
+
+    Every conditional format formula is evaluated at each calculation and also whenever the display of the cell that contains the conditional format is refreshed.
+
+Conditional Formats which depend only on cell values can be used whenever necessary, e.g. indicating a failed check with a red cell. Yet those depending on a specific (complicated) formula should be avoided.
+Principle 8 – Avoid bright colors
+
+It is alright to highlight a few cells with bright colors which should draw attentions. However too many bright colors can be annoying, especially if they are used as a background of rows and columns.
+Keyboard Shortcuts
+
+Unfortunately Excel does not provide much shortcut keys involving colors.
+
+Coloring is not convenient using the Format Cells dialog (Ctrl+1). Even in Excel 2007 version onwards, it is still hard to pick a particular color from the palette without using mouse. Yet Excel since 2007 version allows more possible ways of shortcuts with the Ribbon.
+Hotkey 	Description
+F4 	Repeat the last command or action if possible
+Alt + E + S + T 	Paste Formats (after Copy)
+Alt+Down + I + (Up/Down) + Enter 	Auto-Filter by Color (>=2007 only)
+Alt + H + J + (Arrow Keys) + Enter 	Apply styles to selected cells (>=2007 only)
+Alt + H + F + C 	Set Font Color of selected cells (>=2007 only)
+Alt + H + H 	Set Background (Fill) Color of selected cells (>=2007)
+
+To solve the problem of lack of hotkeys, personally I have created a macro (as an Excel add-in) assigning shortcuts to a few commonly used background colors, e.g. Ctrl+Shift+Q for yellow background; Ctrl+Shift+X for no fill.
+
+However this approach will disable the native undo function in Excel; thus manually created macro shortcuts have to be used with great care.
+Color Palette
+
+The default Excel colors available (“Color Palette” or “Theme Colors”) have changed since Excel 2007 version. It can cause compatibility issues when opening files saved in >=2007 version in earlier versions.
+
+While it rarely causes serious problems, it might be good to understand the color palettes.
+
+For more details, please visit:
+
+    General Descriptions: http://www.hichert.com/en/software/103
+    List of colors: http://www.officewriter.com/blog/2013/05/08/excels-color-palette-explained
+
+Conclusion
+
+Colors create a strong visual appeal to readers of the Excel file, yet it should not be the only way to represent information on data.
+
+Proper use of colors can enhance the readability of a spreadsheet; improper use will damage the readability and make processing difficult. Do not confuse the readers by awkward or unexplained uses of colors.
+
+Please group related cells and columns together and denote the group with one single particular color. This will be very helpful to readers of spreadsheets.

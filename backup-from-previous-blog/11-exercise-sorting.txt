@@ -1,0 +1,37 @@
+Excel for Actuaries #11 – Exercise 1
+January 22, 2013 Benson No comments
+Introduction
+
+This quick exercise will help strengthen your Excel skills. It should take less than 10 minutes to complete.
+Task
+
+Obtain the age and sex of the corresponding policy number. Note that the policy number may not exist.
+Rules
+
+    Calculation time limit: 0.2 seconds (on a modern machine)
+    You can modify the spreadsheet freely to complete the exercise.
+
+Download
+Excel for Actuaries - Exercise 1 (Version 1.0; 4.54 MB)
+
+ 
+Caution
+
+If you do it in the right way, Excel should finish calculation instantly.
+
+If you do it in the wrong way… your Excel should take a few minutes to complete (if it doesn’t freeze or die during the calculation)
+Hint
+
+If you are stuck, you can read this article about data sorting
+Answer
+
+Points to note:
+
+    A policy-by-policy full scan for matching 40000 policies with 60000 policies will take, on average, 40000 * 30000 = 1.2 billion comparisons, which make calculation time very slow.
+    By sorting on the 60000 policies, we can utilize the sorted match feature (binary search-like algorithm), where the number of comparisons can be reduced to approximately 40000 * log 60000 / log 2 = 634,907 comparisons. It will be much faster.
+    Using VLOOKUP instead of MATCH will double (or even triple) the number of matching needed. In such case VLOOKUP will search for the same policy number in the same policy number list for at least twice, one for age and one for sex. It also doubles or triples the calculation time.
+    We should only MATCH once for each policy only. After obtaining the matched row number, we can use it with INDEX to obtain the corresponding age and sex of the policy without the need to search again.
+    By sorting the 60000 policies and using INDEX+MATCH functions, the calculation can be completed instantly.
+
+Certainly an Excel file speaks better:
+Excel for Actuaries - Exercise 1 (Solution) (Version 1.0; 2.18 MB) 

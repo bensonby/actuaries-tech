@@ -1,0 +1,56 @@
+
+Excel for Actuaries #12 – Why do I emphasize on Excel skills?
+January 24, 2013 Benson 2 comments
+Actuaries learn actuarial knowledge, but are self-taught on Excel and programming
+
+Actuaries pass actuarial exams and are then qualified as an actuary. We know this well.
+
+Actuaries work with Excel every day, and MS Access database and some write programs in their work. We use these to produce results every day. We did not have any proper training on computer skills yet we use Excel, database and programming in our work; and rely on them to obtain the figures we want.
+Teaching oneself is very hard. Actuaries did not learn Excel skills well.
+
+Most of us do not know what a good spreadsheet is like.
+
+Without any good training, most of us produce files that are hard to read and maintain, slow and far from self-explanatory. We do not realize how bad the Excel files are because over 90% of them we deal with are that bad. We seldom have the chance to find a well-designed spreadsheet; the worse thing is: we are used to the current level of quality, i.e. we do not know we have to improve.
+The main focus of learning Excel is not solely about how MATCH/DATEDIF/pivot table works, nor how to write a working vba program.
+
+If you are given a spreadsheet with a new function (e.g. CODE ) you have never seen it before. It takes you only a minute or two to find the answers from Google or Excel’s help.
+The more important objectives of learning Excel
+
+Learning Excel means developing the ability to:
+
+    produce fast workbooks which finish calculation within 0.2 seconds, esp. when dealing with a large volume of data;
+    create workbooks which are easy to update, read and understand, and can cope with new adjustments and situations;
+    explain all numbers, assumptions and the case as necessary;
+    Minimize the chance to produce wrong results due to modifications on worksheets, by the use of checks and designs that are invulnerable to cell movements;
+    show clearly the usage of each worksheet and the flow of calculations across worksheets;
+    allow for creating various summaries and reports easily
+
+Note: it does not mean creating a “readme” page or a document with hundreds of words explaining everything in the whole Excel file.
+Why is good spreadsheet design important?
+
+    A good spreadsheet minimizes the risk of making mistakes (you can refer to EuSpRIG for some horror stories)
+    It reduces the time of reading and guessing the intention of the file. (You may not realize but we do spend a lot of time interpreting a workbook.)
+    It helps producing results faster with better accuracy, thus allows more time for interpretation of results and decision-making process.
+    Excel files are produced for human beings to read, but not the computer. Making a spreadsheet that works is not enough.
+
+My experience of re-designing spreadsheets
+
+I have redesigned at least 5 workbooks recently. They were processes of different natures, and each took over an hour to finish prior to redesign. Some of them involve database, some involve VBA program, some involve tens of worksheet.
+
+After redesigning to achieve proper worksheet structure, efficient formulas and simple VBA programs, I reduced the completion time by at least 80% on each of them. Now each workbook can take as little as 10 minutes to finish.
+
+The effort to redesign a worksheet is definitely worth it. The payoff will be realized very quickly.
+How to learn the best practice?
+
+Below are some tips I offer for you to become a more advanced Excel user.
+
+    Do not pay for books, training and courses to learn Excel. They probably do not offer good practice about Excel design. There are free resources on the Internet. Use them.
+        Read my blog (of course, you are reading)
+        OzGrid: A website with many tips on Excel
+        EuSpRIG (European Spreadsheet Risk Interest Group) EuSpRIG is the largest source of information on real-world, implementable methods for introducing into organisations processes and methods to inventory (keep records of), test, fix, document, backup, archive, compare and control the legions of spreadsheets that support critical corporate infrastructure.
+        Google (no explanations necessary)
+    Read articles and books about programming if you are interested (e.g. Code Complete (2nd edition) by Steve McConnell)
+        A list of recommended books: http://grokcode.com/11/the-top-9-in-a-hackers-bookshelf/
+        Anti-patterns of programming (from wiki)
+    Face it: Over 90% of workbooks have bad designs. Think about how you feel when reading workbooks produced by others. Think about how to improve them in order to make them more readable and easier to maintain.
+

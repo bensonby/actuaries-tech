@@ -1,0 +1,55 @@
+Excel for Actuaries #7 – About Dates (Part 1)
+November 29, 2012 Benson No comments
+Introduction
+
+Dates are special in Excel… and are worth discussing. In this article, I will explain the basics of dates in Excel and some common methods to process dates.
+Dates are numbers
+
+Some of you may not know this fact: Dates are just numbers in Excel.
+
+The date 31-12-2011 is equivalent to the number 40908, i.e. the display “31-12-2011″ is a format setting for the number 40908, just like you apply format to change it to 4090800%, or 40,908. This number represents the number of days since 1/1/1900. Such number is called a “serial number” in Excel.
+
+Keyboard Shortcut Tips: Press Ctrl+Shift+3 to set a cell to be in date format; and Ctrl+Shift+~ for general number format.
+
+The basic way to create a date through formula is by using =DATE(2011, 10, 31). But you may not know this: =DATE(2010, 14, 1) and =DATE(2011, 3, -1) also work. Try it! A simple question for you: which date does =DATE(2012, 0, 0) represent?
+
+Other date creation functions include DATEVALUE and TODAY.
+Arithmetics on dates
+
+As you know dates are equivalent to numbers representing the number of days since 1/1/1900, you will find it easy to apply simple arithmetics.
+
+You subtract one date from another to find the number of days between; You add a date by 7 to arrive at the same day next week. You often need more complicated calculation, don’t you? DATEDIF is what you must know.
+The useful function: DATEDIF
+
+According to Pearson Software Consulting, this function has long been available in Excel – since the earliest version of Excel you have worked on, but it has not been well documented and thus not many of us know.
+
+DATEDIF calculate the differences in number of years/months/days given two dates. You can refer to the DATEDIF page at Pearson Software Consulting for more details and examples.
+
+Usage: =DATEDIF(date1, date2, interval) (date1 has to be earlier than date2, otherwise a #NUM! error is returned)
+
+Below are some examples (Notice how it ignores the problem with the end of the month!):
+
+The most useful application of DATEDIF is to find the current age of a person given the birth date.
+=DATEDIF(DateOfBirth, TODAY(), "y")
+
+Note: As seen from the examples, great care should be taken when using “ym”, “yd” or “md” as the interval.
+More Examples on Date Processing
+
+ 
+Date Format
+
+The display of the date can be adjusted by “Format Cells” (Ctrl+1) -> “Date”. There are several preset formats available for you to choose.
+
+If none of them suit your needs, you can select “Custom” and enter your own “formatting code” to control how the date is displayed.
+
+You can find the details of possible formatting code in ozgrid.
+Conclusion
+
+    Dates are numbers representing the number of days since 1/1/1900
+    Make good use of the arithmetic functions and the DATEDIF function. Don’t create long and stupid date formula in Excel again.
+
+Reference
+
+    The excel file containing the above examples: Excel - Dates Part 1 (Version 1.0; 19 kB)
+    Dates and Times in Excel (Pearson Software Consulting) http://www.cpearson.com/excel/datetime.htm
+

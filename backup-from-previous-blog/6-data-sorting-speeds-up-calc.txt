@@ -1,0 +1,50 @@
+Excel for Actuaries #6 – Data sorting speeds up calculation
+June 8, 2012 Benson 2 comments
+Introduction
+
+A slow workbook usually results from poorly written formula. Most of which are lookup formula, e.g. MATCH, VLOOKUP. This article will show you one of the ways to speed up the workbook calculation: data sorting. You will be surprised how much faster your workbook can be.
+Poorly written functions about scanning the cells one by one
+
+The majority of such functions are those requiring Excel to scan the full range one by one or having repeated calculations.
+Examples
+
+    =VLOOKUP(A3, $B$2:$H$10000, 3, FALSE)
+    =MATCH(A3, $B$2:$B$10000, 0)
+    =COUNTIF($B2:$B10000, A3)
+
+Solutions
+
+The solution is to sort the key. After sorting, the above examples can be re-written as:
+
+    =VLOOKUP(A3, $B$2:$H$10000, 3)
+    =MATCH(A3, $B$2:$B$10000, 1)
+    =MATCH(A3, $B$2:$B$10000, 1)-MATCH(A3+1, $B$2:$B$10000, 1) (assuming that the list is an integer list)
+
+The applications of the solutions are better illustrated by an Excel file. It can be downloaded here: Excel - Data Sorting (Version 1.0; 140.5 kB)
+What if an exact match is needed? (Equivalently: to show an error when no matches are found)
+
+Premises: VLOOKUP/HLOOKUP should not be used. The solution uses MATCH
+
+Cell A1: =MATCH(A3, $B$2:$B$10000, 1)
+
+Cell B1: =IF(INDEX($B$2:$B$10000, A1)<>A3, NA(), "OK")
+
+It checks whether the value exists by fitting the result of the MATCH into the reference ranges to see if the value matches.
+How much does it improve?
+
+I didn’t test exactly how much it helps quantitatively. But there is a blog having the result of the tests: http://exceluser.com/blog/1107/why-index-match-is-far-better-than-vlookup-or-hlookup-in-excel.html
+
+It performed two major tests:
+
+    sorted vs unsorted
+    VLOOKUP vs INDEX+MATCH (in case you didn’t read about my previous article: Excel for Actuaries #3 – VLOOKUP: the most used yet the most abused function)
+
+And the result is quoted below:
+
+        With unsorted data, VLOOKUP and INDEX-MATCH have about the same calculation times. That is, INDEX-MATCH is only about 3% faster.
+        With sorted data and an approximate match, INDEX-MATCH is about 30% faster than VLOOKUP.
+        With sorted data and a fast technique to find an exact match, INDEX-MATCH is about 13% faster than VLOOKUP.
+
+Conclusion
+
+Handling large amount of data in Excel requires skills. Data sorting is definitely a basic tool you should know. Always sort the key if “lookups” have to be done on a large scale.

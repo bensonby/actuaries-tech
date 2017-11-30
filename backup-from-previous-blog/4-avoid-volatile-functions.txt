@@ -1,0 +1,49 @@
+Excel for Actuaries #4 – Avoid Volatile Functions, esp. INDIRECT
+April 10, 2012 Benson No comments
+Introduction
+
+You may have heard of the function INDIRECT. Does it seem to be powerful? However my advice is not to use INDIRECT()! It makes workbook calculation slow and vulnerable. INDIRECT belongs to a family of functions called “Volatile Functions”.
+What are volatile functions
+
+Volatile functions in cells are re-calculated even when the depending cells (if any) are unchanged, because they cannot be assumed to have the same value even so. Commonly used volatile functions include INDIRECT, OFFSET, RAND, NOW. (INDIRECT is the mostly (mis)used volatile function!)
+
+To make volatile functions clearer, let’s consider the function RAND(), which generates a random number between 0 and 1. With the calculation mode set to automatic, the cells with RAND() change their values whenever any cells are edited – This behaviour is different from other functions which “cache” the values of dependent cells and know if the cells have to be updated.
+
+What it means is these functions get recalculated all the time although their precedents do not change. On the contrary, Excel knows not to recalculate a non-volatile formulae in a cell when it sees that none of its precedents are modified.
+Why are volatile functions bad?
+
+One reason is enough – They make calculation slow.
+
+The second reason? In particular, the argument of INDIRECT (a string representing a cell address) does not adapt to any changes in the workbook automatically. The workbook easily fails because of the layout-logic dependency.
+Myth: Setting calculation to manual mode helps
+
+Setting calculation to manual seems to help a bit (while creating another serious problem due to manual calculation – it will be explained later), but those volatile functions are still marked to be re-calculated (dirty cells) whenever any cell is changed. So it still slows down the calculation time. Such “solution” is only to avoid part of the drawback, but not actually solve the problem.
+How much slower?
+Performance Comparison Demo: Volatile (INDIRECT) vs non-volatile (Version 1.0; 21 kB)
+
+You can refer to this demo for a simple comparison of the calculation time. The difference is significant even the calculation mode is set to manual. Press Shift+F9 in the worksheet to test the calculation speed.
+
+On my personal computer, the non-volatile version takes about 1 seconds to recalculate; while the volatile version takes about 4 seconds. That’s a 300% difference!
+
+Do not underestimate the difference. When dealing with a large amount of data, or running a VBA program to calculate the output for different inputs, the difference can be very significant, often up to 4 times slower for the volatile version.
+Solution
+
+There are several possible solutions to volatile functions:
+
+    Replace volatile functions by non-volatile functions or manual input
+    I believe using manual inputed cells with clear instructions is better than using volatile functions
+    Re-organize the spreadsheets to avoid using INDIRECT
+    It is an absolutely wrong practice to put the same kind of data in different worksheets, e.g. one worksheet contains the data of one month only (and 12 worksheets for a year). This is a common mistake in worksheet design. All the data should be put in one single worksheet with a data column being the indicator of the month.
+    Use a well-written VBA program for the same purpose
+    An example is a workbook which involves the use of random numbers. Using the function RAND() causes the workbook to recalculate upon any kind of edit. Therefore it should be avoided by creating a simple VBA program which fills a specified range with random numbers from 0 to 1.
+
+Summary
+
+Avoid volatile functions, especially INDIRECT and OFFSET. There must be possible alternatives to using these functions. And remember the key to data management in Excel: always put the same kind of data into one worksheet only.
+More on Volatile Functions
+
+If you want to learn more…
+
+    Excel Recalculation – http://msdn.microsoft.com/en-us/library/bb687891.aspx
+    Decision Models: Volatile Excel Functions – http://www.decisionmodels.com/calcsecretsi.htm
+

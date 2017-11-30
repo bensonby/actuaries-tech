@@ -1,0 +1,27 @@
+Excel for Actuaries #5 – The Excel Syndrome
+April 12, 2012 Benson 1 comment
+
+This post does not contain any suggestions or tips or advice. It is a more leisure one ;p
+The Excel Syndrome
+
+Excel has changed our logical mind. Some of the impacts are negative. We all have somehow been “polluted” by Excel – its ease of use. Below I listed some symptoms of “The Excel Syndrome”. (Note that these statements may not be the full generalization of the picture. But at least these are possible symptoms)
+
+    You manage all sort of data in Excel, in a table format – whether it is related to numbers or not.
+    You use Excel as a calculator, a database, a layout engine, a simple graph/flowchart drawing software, a text editor and a programming environment with VBA.
+    If you have a 100-line string and want to add a comma to the end of each line, you open Excel for this task without hesitation.
+    You are used to reading statements like (I7+D8-E8)*((1+$B$3)^(1/12)-1) and you find it somehow odd to read statements like (ending_bal[t-1]+premium[t]-commission[t])*((1+int_rate)^(1/12)-1).
+    You treat filling down formula and refreshing pivot table as very normal editing procedures we should perform.
+    You have tried to create an entire layout of information (which consists of large amount of text) using Excel, e.g. policy illustrations.
+    You have experienced the problem of not having enough number of rows in Excel.
+    You think you know programming because you are capable of using VBA to automate Excel.
+    You think Excel + VBA is very powerful – so powerful that you don’t need other programming language, or Excel + VBA is enough for any purpose.
+    You have learnt programming with Excel + VBA, and not any other programming languages.
+    You view a date as a number of days.
+    You have ever seen “Calculating (X processors): 1%” in the status bar of Excel.
+    You believe that a database table can be referenced by the column number (thank to VLOOKUP).
+    Q: Need to solve a problem? A: Build an Excel spreadsheet! (whether it is a simple file log, a calendar, etc.)
+    You think that the logic in Excel can be understood more easily when compared with the logic written in a programming language.
+    You have ever created an Excel file of size larger than 50 MB.
+    You put all input parameters in one worksheet.
+
+p.s. You are welcome to suggest more!

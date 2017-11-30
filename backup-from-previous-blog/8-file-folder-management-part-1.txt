@@ -1,0 +1,68 @@
+Excel for Actuaries #8 – File and Folder Management (Part 1)
+December 1, 2012 Benson No comments
+Introduction
+
+As we deal with files in the computer every day in the workplace, proper organization of files is a very important aspect affecting the work efficiency of every worker. It does not really related to Excel or the actuarial industry, but everyone should possess a solid knowledge on this.
+Creation of folders
+
+Folders help organize files by putting the right files into the right directory. However blindly creating folders is inappropriate.
+
+Too few folders for many files is under-organized, it makes files hard to find because of the long list of files in a folder; Too many folders upon a few files, on the other hand, is over-structured, it makes files not easily accessible due to the folders which act as roadblocks.
+
+A balance between the number of folders and accessibility of files is important. It is hard to tell whether this structure or that structure is better, but we should be able to tell when things go too extreme and become messy.
+Naming of Files and Folders
+A. File name accurately talks about what the file is
+
+Use a name that states clearly what the file is about. This is important. Bad file names waste others’ time in finding information from a list of files.
+
+“Easier said than done”: It appears easy to do but we are usually too lazy to give a meaningful file name according to what it does. (The same happens for worksheet names) For example,
+
+    I do not expect a file named “premium_summary.xls” to contain claims information;
+    file names such as “working.xls”, “presentation.ppt”, “study.xlsx”, “report.doc”, “data.xls” do not make sense at all
+
+A common case is: a file is first created for the purpose of premium using the file name “premium.xls”, but is then enhanced to include claim information as well. Please adjust the file name accordingly to show that claim information is also included in the file. This is usually not adjusted due to laziness.
+B. Use of short forms
+
+Unclear short forms are not recommended even if they can reduce the length of the file names. Only the most easily understood abbreviations should be used, such as USD, HK, GAAP, GPV.
+
+We may think that the abbreviations we use on our own are easy to interpret, but it is often not the case; and the readers have to guess what the short form means.
+
+acc: accepted? accident? accrual? accelerated (benefit)? account?
+rec: record? receive?
+SL: study leave, sick leave, or even initial of peeople
+PF: pension fund? provident fund?
+PTD: paid to date? permanent and total disability?
+ER: experience refund? employer?
+MC: mortality charge? major critical illness? multiple choice?
+AM: assistant manager? morning?
+PM: Project manager? Profit Margin? Private/Personal/Public Message? afternoon?
+
+It seems that it is straightforward to know that some choices are nonsense given a short form in a file name. However for a person who reads the file name the first time, they probably hesitated.
+
+Whenever it is possible, using the full words makes it a lot easier to read and comprehend. Typing a few more characters does not hurt in most cases, right? Why bother to make people think for a few seconds more on a file name when they are looking at tens of files?
+
+The same applies to words in Excel files too. Use full words if possible, it eliminates any reading obstacle for any reader.
+C. Length v.s. clarity of file names
+
+File names that are short are easy to read but such names are often unclear, not descriptive and cannot give a good representation of what the file is about.
+
+File names that are long are more descriptive and give a clearer picture of what the file contains, but it will be harder to read (and thank to the default folder view in Windows, which usually does not show the full long file name).
+
+How to choose? When given a choice, I will definitely choose a long and clear file name rather than a short but unclear one. Accurate description is far more important.
+D. Others
+
+Consistency is the another key to facilitate file reading. If a common short form is used, stick with it. Uses of underscores, hyphens, upper case letters have to be consistent.
+
+Regular clean up of folders and files is necessary to maintain a good standard of file quality in the folder. If things go messy, consider restructuring of folders. Every time when you think the effort may be huge and want to give up, you can try to think of the good days when files are easier to locate after the valuable effort.
+Conclusion
+
+My final advice is: learn from your own experience; learn from the hard times you had when reading the file names and folder structures created by others (or yourself if you are clever enough).
+
+In part 2 of this article, I will share more about the considerations related to the full file path, dates and times in file names and version control.
+Reference
+
+    10 File Management Tips:
+    http://sbinfocanada.about.com/od/datamanagement/a/computerfilemgt.htm
+    Use of abbreviations as in programming:
+    http://programmers.stackexchange.com/questions/72593/how-to-abbreviate-variable-names
+

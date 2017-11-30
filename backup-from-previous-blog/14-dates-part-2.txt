@@ -1,0 +1,91 @@
+Excel for Actuaries #14 – About Dates (Part 2)
+June 20, 2013 Benson No comments
+
+In case you haven’t read, here is the part 1: Excel for Actuaries #7 – About Dates (Part 1)
+Default Date Format
+
+Excel has a default date format, e.g. m/d/y. If we type a date in a cell according to this format (2/28/2011), it is recognized as a date automatically and is right-aligned. On the contrary, if we type “28/2/2011″, Excel does not treat it as a date but as a text which is left-aligned.
+
+This default date format is not set in Excel. It follows the Regional Settings in Windows. This default date format is consistent with the system date format as seen in the file browser windows. One can change the default date format in Excel by changing the corresponding date format in the Regional Settings through the Control Panel.
+
+For detailed instructions, please refer to the part “How to Change Region Settings in Windows” in Regional Date Formats in Excel | Excel Semi-Pro.
+Issues on the default date format
+
+In Excel, only a date entered in the default date format is recognized. This could be an issue, but not a serious one.
+
+The more critical issues occur with the text-delimited (CSV) files opened in Excel. (In case you are not familiar with CSV files, CSV file is a plain text, comma-delimited file – you can open the CSV file in notepad to inspect.)
+a. Saving an Excel file into CSV format
+
+When an excel worksheet is saved in CSV format, all dates are saved in CSV in the same format as displayed in Excel.
+The same date in different formats saved into CSV
+
+The same date in different formats saved into CSV
+b. Opening CSV files in Exel
+
+    Given a csv file containing a cell “08/06/2011″, when the default format is mm/dd/yyyy, it will be interpreted by Excel as 6th August 2011. In the other case when the format is dd/mm/yyyy, it will be interpreted by Excel as the date 8th June 2011. It all depends on the default date format setting.
+    Given a csv file containing a cell “27/06/2011″, when the default format is mm/dd/yyyy, it will be interpreted by Excel as a text because it is not a valid date in the default format.
+    When a date is saved to CSV as 31-MAR-48, Excel may interpret the year as 1948 or 2048 depending on the settings. (More on how it interprets the two-digit year: http://support.microsoft.com/kb/214391)
+
+The key ideas are:
+
+    The same csv file may be read differently on different machines.
+    Make sure the date does not become ambiguous after converted to CSV format: YYYY-MM-DD, DD-MMM-YYYY are good choices.
+
+Fixing the wrongly interpreted dates when opening CSV files
+Dates from CSV file not parsed correctly
+
+Dates from CSV file not parsed correctly
+
+The scenario shown above happens when the date formats in the CSV file and default Excel setting are different. The dates in the CSV file (on the right) are not parsed correctly in Excel (on the left) because the order of month and day are reversed. Dates such as 23/9/2013 are not recognized; the date 9-Jun-2011 is interpreted as 6-Sep-2011.
+
+Here are two ways to fix those dates:
+1. Excel formula approach
+
+    Simple case when dates are in MM/DD/YYYY format:
+    =IF(ISNUMBER(A1), DATE(YEAR(A1), DAY(A1), MONTH(A1)), DATE(RIGHT(A1, 4), MID(A1, 4, 2), LEFT(A1, 2)))
+    More complicated case when dates are in M/D/YYYY format:
+    =IF(ISNUMBER(A1), DATE(YEAR(A1), DAY(A1), MONTH(A1)), DATE(RIGHT(A1, 4), LEFT(RIGHT(A1, LEN(A1)-FIND("/", A1)), FIND("/", A1, FIND("/", A1)+1)-FIND("/", A1)-1), LEFT(A1, FIND("/", A1)-1)))
+
+2. Text delimiting approach
+
+(Assume the default date format is M/D/YYYY and it opens a CSV file with date format D/M/YYYY)
+
+The method is to use the Text to Columns (Alt+D+E) feature in Excel to edit the dates.
+Text to Columns feature to fix dates from CSV file
+
+Text to Columns feature to fix dates from CSV file
+Formula containing dates as string
+Dates as text
+
+Sentences such as “Balance Sheet as of 31-MAR-2013″ depend on a date input, where the date comes from another cell storing 3/31/2013.
+Assuming the date is stored in cell A1, the formula ="Balance Sheet as of "&A1 will give “Balance Sheet as of 41364″, because the formula concatenate the date using its value, i.e. its serial number.
+
+To include the date in the desired format, it has to be:
+UPPER(TEXT(A1, "dd-mmm-yyyy")
+
+TEXT is a useful function which takes a value and outputs a string using a given format string (dd-mmm-yyyy) applied on a value. (Description of TEXT in Tech on the Net)
+Dates as key for lookup
+
+When a date is used to find information, please also use the TEXT function to transform the date into a readable date.
+
+An example is illustrated below, for finding claim information using both the incident date and the reported date. The approach on the left hand side is not preferred; the one on the right is preferred.
+Using dates as key for formula reference - the right hand side approach is preferred for readability
+
+Using dates as key for formula reference - the right hand side approach is preferred for readability
+Hotkeys
+
+Hotkeys are always essential for fast manipulations in Excel.
+Hotkey 	Description
+Ctrl+Shift+# 	make a cell in date format (dd-mmm-yy)
+Ctrl+Shift+~ 	make a cell in general format (serial number for dates)
+Ctrl+1 	open "Format Cells" dialog
+Alt+D+E 	Text to Columns
+Conclusion
+
+    While the concept of serial number brings convenience in date arithmetics, it creates issues due to the different date formats, especially on csv file.
+    The interpretation of dates (m/d/y v.s. d/m/y) in Excel depends on system settings. Thus the same CSV file can be interpreted differently on machines.
+    Two suggested good practices when dealing with output of dates to CSV are:
+        use the number yyyymmdd to represent a date (An 8-digit number)
+        always use the format YYYY-MM-DD to save dates into CSV files
+    Include dates in a string by using the TEXT function.
+

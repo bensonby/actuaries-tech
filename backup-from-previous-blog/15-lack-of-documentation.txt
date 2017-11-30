@@ -1,0 +1,65 @@
+Excel for Actuaries #15 – Lack of Documentation – the most common mistake
+Posted on June 29, 2013 by Benson	
+Introduction
+
+If I am to pick the single top mistake with Excel files, I believe the lack of documentation is the one.
+
+To most of people, documentation is considered unpleasant to do. It is boring. It is not fun.
+
+Let’s have some clarifications on the meaning of “documentation” first.
+
+    Documentation is not a README page with ten paragraphs stating all the methodologies and assumptions.
+    Documentation is not a step-by-step guide (for dummies?) for how to update an Excel file.
+    Documentation refers to clear and concise words which tell readers what the numbers/formulas/worksheets do.
+
+The lack of documentation refers to
+
+    inaccurate/unclear worksheet names or file names
+    hardcoded numbers or strings without explanations
+    special formulas without explanations
+    inappropriate or obfuscated orders and flows of worksheets
+    workings which are not traceable
+    complicated formulas which are not easily understood
+    the presence of unexplained short forms which are not widely understood
+    absence of data sources
+
+Knowing the math: Time spent < Time saved
+
+Explanations or documentation should not be long. They can be a few words or a few sentences, which should require only a few minutes to complete.
+
+By proper documentation and clear explanations, many hours can be saved on interpreting the workbooks by any person (including the creator).
+
+People may read the workbooks one hour later, one week later, one month later or even 5 years later! A lot of time has to be spent on the investigation if the workbooks are completely not self-explanatory.
+
+Although it is hard to measure, I believe that the time saved outweighs the time spent on making the explanations in a workbook.
+
+I regard it as: the little extra time spent for documentations reduces the possible long tail risk in the reading time in the future.
+Do the documentation as you work, not after you complete the work
+
+Documentation often appears tedious to do, especially when a task is finished, i.e. you do not bother to type the “useless” words before you move on to the next task. It is also time-consuming to re-think all the steps, assumptions and points to note. Thus the key is:
+Type the notes bit by bit during the work.
+
+Jot down the points to note immediately after the formula is typed. With this method, you can keep the extra time devoted to documentation minimal, as all descriptions of the work are made when the task is still fresh to you.
+Type the words in the proper place
+
+Making a “README” worksheet is not a sound choice: using a single “README” worksheet creates paragraphs of words in a single worksheet which refer to all the multiple worksheets in the workbooks. It makes the remarks hard to find and hard to read.
+
+Explanations should be located adjacent to the areas being explained (proper scope), ensuring that any reader can find and read the description without difficulties, e.g. a few lines explaining what a worksheet does at the top of it (under its heading) / a comment box on a cell with a hardcoded number.
+
+Of course it adds extra values if there is a README worksheet dedicated to all the explanations.
+Problems associated with lack of documentation
+
+    The workbook is not self-explanatory. It is hard to understand a workbook.
+    It is hard to verify the correctness of data.
+    Duplication of efforts in verification due to the above.
+    A lot of extra time spent on investigation of workbooks.
+    Audit concerns.
+    Occurrence of Spreadsheet errors due to weak understanding of the workbooks.
+
+Conclusion
+
+    It is important to recognize the benefits of clear descriptions in any workbook. It saves hours of time of the “future you” and your colleagues, which definitely outweighs the costs of typing the sentences.
+    Make sure that the objectives and rationales behind a logic or a formula are clearly and concisely presented, with no ambiguous terms, non-descriptive worksheet names nor unexplained hard-coded values.
+    To minimize the time spent on extra documentation, type the descriptions while working, instead of after the work is finished when all the memories have faded.
+    Make sure the descriptions are all at their appropriate place and are clearly visible to any reader.
+

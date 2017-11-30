@@ -1,0 +1,82 @@
+Top Mistakes in using MS Office Products / Computer Knowledge
+Posted on November 22, 2013 by Benson	
+
+Here I list the top mistakes (technology-related) in MS Word, Excel (VBA), PowerPoint, Outlook and general computer usage:
+Microsoft Word
+
+    Using multiple returns or spaces or tabs to align text.
+    Not knowing the use of tabs
+    Not using styles for consistent formatting
+    Using empty lines to adjust the spacing between paragraphs
+    Not understanding page/section breaks and what it can do
+    Doing text formatting with the “common” buttons on the home ribbon
+    Copying Excel figures to Word as a picture but not text
+    Manually typing captions and labeling tables underneath them
+    Generating a Table of Content which is not functional until after many fixes to the document
+    Manually creating footnotes to documents
+
+Microsoft Excel
+
+    Lack of documentation and explanations
+    Slow and over-complicated workbooks
+    Using VLOOKUP or volatile functions such as INDIRECT and OFFSET
+    Using merged cells
+    Separating the same kind of data in different worksheets
+    Bad file names and worksheet names
+    Illogical flow of worksheets
+    Isolated blocks of cells
+    Using manual calculation mode
+     Lack of validation cells
+
+VBA with Microsoft Excel
+
+    Complicated VBA codes due to bad spreadsheet design
+    No descriptions about what a button does
+    No error handling
+    Non-reusable codes and functions
+    Doing things in VBA that are easily done by human
+    Using ActiveSheet, Select
+    Hardcoding range addresses
+    Occupying the Windows clipboard during Copy & Paste operations given “paste special: format only” isn’t needed
+    Bad function/sub names or bad module names
+    Writing Subs or Functions that are too long (>=30 lines)
+
+Microsoft PowerPoint
+
+    Too many words in slides (50 words are way too much)
+    Boring presentations
+    Not establishing and emphasizing on the overall structure
+    Not using slide masters for formatting
+    Abusing “SmartArts” http://www.powerpointninja.com/powerpoint-2007/powerpoint-smartart-is-dumb/
+    Type everything in the PowerPoint or treat the PowerPoint file as a complete document
+    Copying Word paragraphs / Excel figures / tables to PowerPoint slides as a picture
+    Showing words that are small or hardly readable, esp. in images, posters and screenshots
+    Embed video in the PowerPoint file
+    Using transitions without meanings
+
+Microsoft Outlook
+
+    Replying unrelated stuff in a same conversation with a bad subject
+    Writing long emails without focus
+    Unclear description of issues
+    Including text or numbers in emails as a picture (to preserve formatting or whatever)
+    Forgetting to attach files
+    Bad folder structures
+    Bad subjects: too general or too long
+    Responding to phishing emails
+    Sending attachments that are too large
+    Sending Excel files to other parties where formula contains links which fail on the recipient side
+
+General Computer Usage
+
+    Not knowing useful keyboard shortcuts such as Win+R, Win+E, Win+L, Win+Break, Alt+Print Screen
+    Bad version control of files
+    Inappropriate folder structure – too many files or too few files in a folder
+    Unclear or inaccurate folder names and file names
+    Not utilizing the power of search engines for information and softwares
+    Inability to explore software features
+    Not understanding the concept of file extensions
+    Not using Home/End/Ctrl+left/Ctrl+Right keys in text editing
+    No sense of verifying the accuracy or source of information from Internet
+    Not knowing what IP address is
+

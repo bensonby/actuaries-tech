@@ -1,0 +1,30 @@
+Merged Cells
+September 19, 2011 Benson No comments
+Problem
+
+Merged cells create the following problem:
+
+    Getting the error dialog during copy & paste or sorting
+    Error Dialog: The operation requires the merged cells to be identically sized.
+
+    Error Dialog: The operation requires the merged cells to be identically sized.
+    It becomes impossible to select a single column consisting of only part of a merged cell by keyboard shortcuts (Ctrl+Space). Notice that the following cannot be done via Ctrl+Space. It reduces the working efficiency.
+
+    With a merged cell present, the above selection cannot be done without the help of a mouse.
+
+    With a merged cell present, the above selection cannot be done without the help of a mouse.
+
+Solution
+
+In most cases, we merge cells in order to align some text to the centre of multiple cells. The solution is to use “Centre across selection”.
+
+Select the range of cells, open the “Format Cells” dialog (Ctrl+1), and select “Centre Across Selection” in the Horizontal Text Alignment (See the screenshot below).
+
+"Format Cells" -> "Center Across Selection"
+
+"Format Cells" -> "Center Across Selection"
+
+As an illustration, below shows the outcomes of using merged cells and using “Centre Across Selection”. They should look the same, therefore please use “Centre Across Selection” from now on, instead of the “Merge Cells” feature.
+The "Centre Across Selection" produces the same effect
+
+The "Centre Across Selection" produces the same effect

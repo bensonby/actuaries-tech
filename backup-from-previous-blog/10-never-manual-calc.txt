@@ -1,0 +1,73 @@
+Excel for Actuaries #10 – Never use Manual Calculation Mode
+January 20, 2013 Benson No comments
+Introduction
+
+Regarding the calculation mode in Excel, some people use automatic mode all the time, while some use manual mode all the time.
+My advice is: use automatic mode all the time!
+Reasons of people using manual mode
+
+    Some (complex) spreadsheets are calculating slowly
+    These spreadsheets always recalculate upon any kind of editing
+    It makes the edit process slow. I use manual mode to increase the editing speed back to normal.
+    When running VBA macro, using manual calculation mode can reduce the running time.
+
+Why aren’t these valid reasons?
+1. Risk of not recalculating leads to wrong figures
+
+While one may believe that pressing F9 to calculate the opened workbooks is easy and will not be forgotten, we cannot neglect such risk. Even though there is an option of “Recalculate before save” to help, one may still read a wrong figure in making a decision prior to the save.
+2. It is the bad spreadsheet design leading to slow calculation
+
+When the workbook is slow, the correct solution is to enhance it. Changing the calculation mode is simply not a solution. When the spreadsheet is designed well, the workbook will not be slow and the problem will automatically vanish.
+3. It disturbs the calculation mode settings of other Excel files
+
+Excel has only one application-wide calculation mode. Either all opened workbooks are in automatic calculation mode or all are in manual calculation mode. Yet a workbook has its saved calculation mode. Such setting does not make sense. For more details on how Excel determines the calculation mode of Excel, please refer to http://support.microsoft.com/kb/214395.
+4. Mode is not restored when macro is terminated by error
+
+In a macro, when manual calculation mode is used, if the macro does not complete successfully and there are no proper error handling, it will not restore to the original automatic calculation mode.
+
+Ozgrid also suggests that manual calculation mode should not be used.
+How fast a workbook should be?
+
+A slow workbook is the major cause of changing the calculation mode to manual. Any workbook should finish the full calculation within 0.5 seconds. A calculation time of over 2 seconds is considered not acceptable, in such case the workbook requires a significant modification. Below are Some tips to speed up calculation. Some of them are covered in more details in my previous articles.
+Tips to Speed up Calculation
+1. Data Sorting
+
+Some functions can utilize the sorted “feature” of the data range to avoid a one-by-one exact match. Examples are MATCH, LOOKUP and VLOOKUP. If the amount of data is large and frequent searching (on the same data range) is required, sorting can significantly boost up the calculation speed.
+
+My article on this topic: Excel for Actuaries #6 – Data sorting speeds up calculation
+2. Remove duplicated calculations
+
+The most common type of duplicated calculation is like the following formula:
+=IF(ISERROR(VLOOKUP(B1, $A$1:$F$500, 5, FALSE)), 0, VLOOKUP(B1, $A$1:$F$500, 5, FALSE))
+
+There are also cases where one fragment appears many times in different cells.
+
+Duplicated formula should be removed by using one cell to hold the result of the duplicated formula.
+3. Never use Volatile functions and Array functions
+
+As I have mentioned in another article <reference>, volatile functions significantly slow down workbook calculation. Avoid these functions: INDIRECT, OFFSET, ROW, COLUMN.
+
+My article on this topic: Excel for Actuaries #4 – Avoid Volatile Functions, esp. INDIRECT
+
+Array functions should also be avoided. They are very slow in calculating. In most of the case array functions can be substituted by adding more columns to the spreadsheet.
+4. Avoid unnecessary calculations
+
+Imagine a workbook projecting the future cash flows of an insurance policy. In the calculation, premium rates of each policy year are obtained from a large excel table. Also a policy may have a specific term. A poor calculation template will read in all premium rates regardless of they are actually used or not. while a good template only attempts to obtain the premium rates when the policy is still in force.
+5. Avoid formula that uses too many cells
+
+Avoid using Formula which requires calculation using a large range, e.g. SUMPRODUCT, COUNTIF. These have to look into all the cells in the range to obtain the result. Thus it can be slow with hundreds of cells.
+6. Consider other tools
+
+If the data volume is very large or the calculations are too complex, you may need to use a database or a programming language to accomplish the task instead of using a very slow Excel spreadsheet.
+Do not doubt how fast the workbook can be
+
+We have been self-taught on Excel;
+We have been learning Excel in the wrong way;
+We have seen too many slow workbook;
+
+A workbook can be much faster than you imagine.
+
+Recently I have encountered 3 workbooks that take around 5 seconds to complete the calculation. I improved them by using half a day on each workbook. After the enhancement, they all finish the calculation within 0.2 seconds. The modifications are mostly the 6 things mentioned above. Speeding up calculation is as simple as those.
+Summary
+
+Always set your calculation mode to automatic, and keep your workbook fast and simple. Do not create a slow workbook with poor formula design and set the calculation mode to manual – it is not a real solution to the long calculation time problem.
