@@ -1,18 +1,20 @@
-title: Stop using VLOOKUP
-
-post-url: stop-using-vlookup
+title: Avoid using VLOOKUP
 
 # Introduction
 
-[`VLOOKUP`](https://support.office.com/en-us/article/VLOOKUP-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1) is a function very well-known because of... sorry, `VLOOKUP` is not really that useful - it is not necessary at all. Please avoid using `VLOOKUP`.
+[`VLOOKUP`](https://support.office.com/en-us/article/VLOOKUP-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1) is a function very well-known because everyone uses it. However `VLOOKUP` creates problems most of the time. A better approach will be using the combination of `INDEX` and `MATCH` functions. It may sound complex (using two functions makes the formula longer) at first, but I will explain the rationale in this article.
 
 # Problem with VLOOKUP
 
+`VLOOKUP` appears convenient for most of us; we all get used to it. Yet it is important to understand the weaknesses of this function.
+
+Here the formula `=VLOOKUP(C9, Data!$A$2:$Z$6000, 4, FALSE) will be used for the illustration purpose.
+
 1. Dependency of layout and logic - the order of columns
 
- The value to be found is expressed as the column number. If the column order is altered, the function fails to adjust itself. In light of this, some people added a number reference above the columns, as shown in the screenshot below. However manual adjustment is still needed whenever columns are added (Filling in formula). Excel is not supposed to be that manual.
+ The third argument: `4`, is the column number in the reference range (?), in this case the 4th column is column D. This "magic number" does not adjust itself when the columns are changed in the `Data` worksheet. In light of this, some people add a number reference above the columns, as shown in the screenshot below. However manual adjustment is still necessary whenever columns are added (Filling in formula in new columns or adjusting references to deleted columns). It creates nuisance (?) and the worksheet is not clean enough since it is "polluted" by the magic numbers.
 
- In addition, there is a restriction where the value to be matched must be in the leftmost column of the range, and the target column hence must be placed on the right of it. This is another dependency of layout and logic. Please think: Why must I place my columns in this way just for the sake of the stupid `VLOOKUP` function?
+ In addition, there is a restriction in using `VLLOUP`: the value to be matched (column A for `C9`) must be in the leftmost column of the range, and the target column hence must be placed on the right of it. This is another dependency of layout and logic. Please think: Why must I place my columns in this way just for the sake of the stupid `VLOOKUP` function?
 
  ![`VLOOKUP` restrictions on column orders](assets/posts/vlookup-numbering-columns.png)
 
