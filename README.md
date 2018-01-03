@@ -1,5 +1,10 @@
 # actuaries-tech
 
+Color Scheme
+------------
+
+https://coolors.co/89b6a5-355691-555555-4c3b4d-c9eddc
+
 Article List
 ------------
 
