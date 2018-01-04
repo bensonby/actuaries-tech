@@ -8,7 +8,7 @@ title: Avoid using VLOOKUP
 
 `VLOOKUP` is very popular. Nearly all of us know how to use it. Yet it is important to understand the weaknesses of this function.
 
-Throughout this articule, the formula `=VLOOKUP(C9, Data!$A$2:$Z$6000, 4, FALSE)` will be used for the illustration purpose.
+Throughout this article, the formula `=VLOOKUP(C9, Data!$A$2:$Z$6000, 4, FALSE)` will be used for the illustration purpose.
 
 ## 1. Dependency of layout and logic - the order of columns
 
