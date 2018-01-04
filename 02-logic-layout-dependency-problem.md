@@ -16,7 +16,7 @@ Below are 5 examples of Excel features or formula that involves strong logic and
 
 ## Example 1 – VLOOKUP
 
-The column number, or the third attribute, of the [`VLOOKUP`][vlookup-doc] function is a simple example. When a column of the table array is moved, this function will fail because the column number does not change accordingly. Some people try to avoid this problem by using a number above the column. But this is not the best solution as it still suffers from the logic layout dependency. The proper solution will be illustrated in another article.
+The column number, or the third attribute, of the [`VLOOKUP`][vlookup-doc] function is a simple example. When a column of the table array is moved, this function will fail because the column number does not change accordingly. Some people try to avoid this problem by using a number above the column. But this is not the best solution as it still suffers from the logic layout dependency. The proper solution is explained in [Stop using VLOOKUP][article-vlookup].
 
 [![`VLOOKUP` formula failure][image-vlookup]][image-vlookup]
 
@@ -62,3 +62,4 @@ The key concept is to reduce the interdependency between the logic and layout in
 [image-pivot-table]: /content/images/2017/12/logic-layout-pivot-table.png
 [image-indirect]: /content/images/2017/12/logic-layout-indirect.png
 [image-vlookup]: /content/images/2017/12/logic-layout-vlookup.png
+[article-vlookup]: /stop-using-vlookup
