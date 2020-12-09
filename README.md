@@ -1,5 +1,10 @@
 # actuaries-tech
 
+Production Site
+---------------
+
+Visit the blog at: https://actuaries.tech
+
 Color Scheme
 ------------
 
