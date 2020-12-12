@@ -19,3 +19,8 @@ Article List
 |published| Y | Y |Logic-Layout dependency problem|N/A|[02-logic-layout-dependency-problem.md](./02-logic-layout-dependency-problem.md)
 |published| N | Y |Stop using VLOOKUP|N/A|[03-stop-using-vlookup.md](./03-stop-using-vlookup.md)
 |published| N | N |About Dates (Part 1: Basics) |N/A|[04-dates-part1.md](./04-dates-part1.md)
+
+Favicon generator
+-------------
+
+https://realfavicongenerator.net
