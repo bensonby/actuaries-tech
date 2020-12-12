@@ -24,3 +24,11 @@ Favicon generator
 -------------
 
 https://realfavicongenerator.net
+
+Wordcloud generator
+---------------
+
+```
+pip3 install stylecloud
+python3 create_wordcloud.py
+```
