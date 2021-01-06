@@ -1,0 +1,28 @@
+* {
+  color: #555555;
+  font-family: Merriweather;
+  box-sizing: border-box;
+}
+table, th, tr, td {
+  background: #fafafa;
+  border: 1px solid #c9baca;
+  border: 1px solid #89b6a5;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px 8px;
+  white-space: nowrap;
+}
+th {
+  background: #c9eddc;
+  /* background: #4c3b4d;
+  color: white; */
+  min-width: 50px;
+  font-weight: normal;
+}
+th:not(:first-child) {
+  min-width: 100px;
+}
+td {
+  font-family: "Open Sans";
+}
