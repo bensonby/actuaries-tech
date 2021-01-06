@@ -1,10 +1,8 @@
 * {
-  color: #555555;
   font-family: "Didact Gothic";
   box-sizing: border-box;
 }
 table, th, tr, td {
-  background: #fafafa;
   border: 1px solid #c9baca;
   border: 1px solid #89b6a5;
   border-collapse: collapse;
@@ -18,7 +16,20 @@ th {
   min-width: 50px;
   font-family: "Titillium Web";
   font-weight: bold;
+  color: #355691;
 }
 th:not(:first-child) {
   min-width: 100px;
+}
+
+.value {
+  text-align: right;
+}
+
+/* Override default prism coy theme */
+code {
+  padding: 0 !important;
+  border: none !important;
+  background-color: transparent;
+  white-space: pre !important;
 }
