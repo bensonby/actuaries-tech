@@ -3,12 +3,11 @@
   box-sizing: border-box;
 }
 table, th, tr, td {
-  border: 1px solid #c9baca;
   border: 1px solid #89b6a5;
   border-collapse: collapse;
 }
 th, td {
-  padding: 5px 8px;
+  padding: 0;
   white-space: nowrap;
 }
 th {
@@ -26,9 +25,23 @@ th:not(:first-child) {
   text-align: right;
 }
 
+td p {
+  margin: 0;
+  padding: 5px 8px;
+  vertical-align: top;
+}
+td p:not(:last-child) {
+  border-bottom: 1px solid #cccccc;
+}
+td code {
+  padding: 0 8px !important;
+}
+td p + code {
+  font-size: 0.9em !important;
+}
+
 /* Override default prism coy theme */
 code {
-  padding: 0 !important;
   border: none !important;
   background-color: transparent;
   white-space: pre !important;
