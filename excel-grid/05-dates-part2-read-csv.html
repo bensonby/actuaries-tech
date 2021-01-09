@@ -6,64 +6,52 @@
     <link href="05-dates-part2-csv-result.css" rel="stylesheet" />
     <link href="prismjs/prism.css" rel="stylesheet" />
   </head>
-  <body style="width: 488px;"><div class="container"><div class="content">
+  <body style="width: 620px;"><div class="container"><div class="content">
     <div class="background-logo"> </div>
+
     <div class="column">
-      <h3 class="center">dates.xls</h3>
-      <table class="excel-grid center-block">
+      <h3 class="center">CSV with dd/mm/yyyy</h3>
+      <table class="text center-block">
         <thead>
           <tr>
-            <th></th>
-            <th>A</th>
+            <th colspan="2">dates-ddmmyyyy.csv</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th>1</th>
             <td>
-              <p class="value">11/29/2020</p>
+              <p>03/12/2017</p>
             </td>
           </tr>
           <tr>
             <th>2</th>
             <td>
-              <p class="value">29-Nov-20</p>
+              <p>03/08/2011</p>
             </td>
           </tr>
           <tr>
             <th>3</th>
             <td>
-              <p class="value">2020-11-29</p>
+              <p>28/02/2005</p>
             </td>
           </tr>
           <tr>
             <th>4</th>
             <td>
-              <p class="value">29/11/2020</p>
+              <p>24/09/2010</p>
             </td>
           </tr>
           <tr>
             <th>5</th>
             <td>
-              <p class="value">29-Nov-2020</p>
+              <p>11/12/2008</p>
             </td>
           </tr>
           <tr>
             <th>6</th>
             <td>
-              <p class="value">44164</p>
-            </td>
-          </tr>
-          <tr>
-            <th>7</th>
-            <td>
-              <p class="value">44,164.00</p>
-            </td>
-          </tr>
-          <tr>
-            <th>8</th>
-            <td>
-              <p class="value">4416400%</p>
+              <p>13/03/2012</p>
             </td>
           </tr>
         </tbody>
@@ -71,76 +59,72 @@
     </div>
 
     <div class="column">
-      <h3>
-        Save as CSV
+      <h3 class="center">
+        Reading CSV<br/>
+        in Excel
       </h3>
       <div class="long-arrow-right" id="arrow-save-as-csv"></div>
     </div>
 
     <div class="column">
-      <h3 class="center">Exported to CSV</h3>
-      <table class="text center-block">
+      <h3 class="center">Excel using mm/dd/yyyy</h3>
+      <table class="excel-grid center-block">
         <thead>
           <tr>
-            <th colspan="2">dates.csv</th>
+            <th></th>
+            <th style="min-width: 130px;">A</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th>1</th>
             <td>
-              <p>11/29/2020</p>
+              <p class="value">03/12/2017</p>
             </td>
           </tr>
           <tr>
             <th>2</th>
             <td>
-              <p>29-Nov-20</p>
+              <p class="value">03/08/2011</p>
             </td>
           </tr>
           <tr>
             <th>3</th>
             <td>
-              <p>2020-11-29</p>
+              <p>28/02/2005</p>
             </td>
           </tr>
           <tr>
             <th>4</th>
             <td>
-              <p>29/11/2020</p>
+              <p>24/09/2010</p>
             </td>
           </tr>
           <tr>
             <th>5</th>
             <td>
-              <p>29-Nov-2020</p>
+              <p class="value">11/12/2008</p>
             </td>
           </tr>
           <tr>
             <th>6</th>
             <td>
-              <p>44164</p>
-            </td>
-          </tr>
-          <tr>
-            <th>7</th>
-            <td>
-              <p>"44,164.00"</p>
-            </td>
-          </tr>
-          <tr>
-            <th>8</th>
-            <td>
-              <p>4416400%</p>
+              <p>13/03/2012</p>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="message justify">
-      The date 29 Nov 2020 is displayed in Excel with different formats.
-      When exporting to CSV, Excel stores the displayed text (11/29/2020) instead of the real value (44164).
-    </p>
+
+    <div class="message">
+      <p class="justify">
+        When the machine is using mm/dd/yyyy setting while the CSV is using dd/mm/yyyy format, Excel cannot parse the dates in the CSV file correctly. Excel either:
+      </p>
+      <ol>
+        <li>mixes up the month and day (e.g. 3rd Dec vs 12th Mar), or</li>
+        <li>fails to parse the date, leaving the "date" as left-aligned text</li>
+      </ol>
+    </div>
   </div></div>
     <script src="prismjs/prism.js"></script>
   </body>
