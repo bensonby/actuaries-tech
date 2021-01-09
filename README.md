@@ -32,3 +32,8 @@ Wordcloud generator
 pip3 install stylecloud
 python3 create_wordcloud.py
 ```
+
+Taking screenshot for webpage of excel grid
+------------------
+
+Firefox -> Ctrl+Shift+K -> `:screenshot --selector "body" --dpr 2`

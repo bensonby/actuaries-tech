@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="05-dates-part2-csv-result.css" rel="stylesheet" />
+    <link href="prismjs/prism.css" rel="stylesheet" />
+  </head>
+  <body><div class="container"><div class="content">
+    <div class="background-logo"> </div>
+    <div class="column">
+      <h3>dates.xls</h3>
+      <table class="excel-grid">
+        <thead>
+          <tr>
+            <th></th>
+            <th>A</th>
+            <th class="small">B</th>
+            <th>C</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>
+              <p class="value">11/29/2020</p>
+            </td>
+            <td/>
+            <td>
+              <code class="secondary">Format: mm/dd/yyyy</code>
+            </td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>
+              <p class="value">29-Nov-20</p>
+            </td>
+            <td/>
+            <td>
+              <code class="secondary">Format: dd-mmm-yy</code>
+            </td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>
+              <p class="value">2020-11-29</p>
+            </td>
+            <td/>
+            <td>
+              <code class="secondary">Format: yyyy-mm-dd</code>
+            </td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>
+              <p class="value">29/11/2020</p>
+            </td>
+            <td/>
+            <td>
+              <code class="secondary">Format: dd/mm/yyyy</code>
+            </td>
+          </tr>
+          <tr>
+            <th>5</th>
+            <td>
+              <p class="value">29-Nov-2020</p>
+            </td>
+            <td/>
+            <td>
+              <code class="secondary">Format: dd-mmm-yyyy</code>
+            </td>
+          </tr>
+          <tr>
+            <th>6</th>
+            <td>
+              <p class="value">44164</p>
+            </td>
+            <td/>
+            <td>
+              <code class="secondary">Format: 0 (General)</code>
+            </td>
+          </tr>
+          <tr>
+            <th>7</th>
+            <td>
+              <p class="value">44,164.00</p>
+            </td>
+            <td/>
+            <td>
+              <code class="secondary">Format: #,##0.00 (Number)</code>
+            </td>
+          </tr>
+          <tr>
+            <th>8</th>
+            <td>
+              <p class="value">4416400%</p>
+            </td>
+            <td/>
+            <td>
+              <code class="secondary">Format: 0% (Percentage)</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="column">
+      <h3>
+        Save as CSV
+      </h3>
+      <div class="long-arrow-right" id="arrow-save-as-csv"></div>
+    </div>
+
+    <div class="column">
+      <h3>dates.csv</h3>
+      <table class="text">
+        <thead>
+          <tr>
+            <th></th>
+            <th>File content after saving as CSV</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>
+              <p>11/29/2020,,"Format: mm/dd/yyyy"</p>
+            </td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>
+              <p>29-Nov-20,,"Format: dd-mmm-yy"</p>
+            </td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>
+              <p>2020-11-29,,"Format: yyyy-mm-dd"</p>
+            </td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>
+              <p>29/11/2020,,"Format: dd/mm/yyyy"</p>
+            </td>
+          </tr>
+          <tr>
+            <th>5</th>
+            <td>
+              <p>29-Nov-2020,,"Format: dd-mmm-yyyy"</p>
+            </td>
+          </tr>
+          <tr>
+            <th>6</th>
+            <td>
+              <p>44164,,"Format: 0 (General)"</p>
+            </td>
+          </tr>
+          <tr>
+            <th>7</th>
+            <td>
+              <p>"44,164.00",,"Format: #,##0.00 (Number)"</p>
+            </td>
+          </tr>
+          <tr>
+            <th>8</th>
+            <td>
+              <p>4416400%,,"Format: 0% (Percentage)"</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="message">
+      The same date 29 Nov 2020 is set to display in different formats in Excel.
+      Since CSV format can only store one value for a "cell", Excel stores the displayed text (e.g. 11/29/2020) instead of the real value (44164) in the CSV.
+    </p>
+  </div></div>
+    <script src="prismjs/prism.js"></script>
+  </body>
+</html>
