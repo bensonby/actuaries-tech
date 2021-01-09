@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="excel-grid.css" rel="stylesheet" />
+    <link href="prismjs/prism.css" rel="stylesheet" />
+  </head>
+  <body style="width: 800px;"><div class="container"><div class="content">
+    <div class="background-logo"> </div>
+    <h3>Using dates in keys</h3>
+    <table class="excel-grid">
+      <thead>
+        <tr>
+          <th></th>
+          <th>A</th>
+          <th>B</th>
+          <th class="small">C</th>
+          <th class="small">D</th>
+          <th>E</th>
+          <th>F</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td/><td/><td colspan="4"><p class="bold">Exchange Rate Data</p>
+        </tr>
+        <tr class="header">
+          <th>2</th>
+          <td><p class="bad">Bad Key</p></td>
+          <td><p class="good">Good Key</p></td>
+          <td><p>From</p></td>
+          <td><p>To</p></td>
+          <td><p>Date</p></td>
+          <td><p>Exchange Rate</p></td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>
+            <p class="bad">EUR-USD-44105</p>
+            <code class="lang-excel-formula">=C3&"-"&D3&"-"&E3</code>
+          </td>
+          <td>
+            <p class="good">EUR-USD-20201001</p>
+            <code class="lang-excel-formula">=C3&"-"&D3&"-"&TEXT(E3, "yyyymmdd")</code>
+          </td>
+          <td><p>EUR</p></td>
+          <td><p>USD</p></td>
+          <td><p class="value">01-Oct-2020</p></td>
+          <td><p class="value">1.174426</p></td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>
+            <p class="bad">GBP-USD-44105</p>
+            <code class="lang-excel-formula">=C4&"-"&D4&"-"&E4</code>
+          </td>
+          <td>
+            <p class="good">GBP-USD-20201001</p>
+            <code class="lang-excel-formula">=C4&"-"&D4&"-"&TEXT(E4, "yyyymmdd")</code>
+          </td>
+          <td><p>GBP</p></td>
+          <td><p>USD</p></td>
+          <td><p class="value">01-Oct-2020</p></td>
+          <td><p class="value">1.289732</p></td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td>
+            <p class="bad">HKD-USD-44105</p>
+          </td>
+          <td>
+            <p class="good">HKD-USD-20201001</p>
+          </td>
+          <td><p>HKD</p></td>
+          <td><p>USD</p></td>
+          <td><p class="value">01-Oct-2020</p></td>
+          <td><p class="value">0.129031</p></td>
+        </tr>
+        <tr>
+          <th>6</th>
+          <td>
+            <p class="bad">EUR-USD-44106</p>
+          </td>
+          <td>
+            <p class="good">EUR-USD-20201002</p>
+          </td>
+          <td><p>EUR</p></td>
+          <td><p>USD</p></td>
+          <td><p class="value">02-Oct-2020</p></td>
+          <td><p class="value">1.172086</p></td>
+        </tr>
+        <tr>
+          <th>7</th>
+          <td>
+            <p class="bad">GBP-USD-44106</p>
+          </td>
+          <td>
+            <p class="good">GBP-USD-20201002</p>
+          </td>
+          <td><p>GBP</p></td>
+          <td><p>USD</p></td>
+          <td><p class="value">02-Oct-2020</p></td>
+          <td><p class="value">1.293753</p></td>
+        </tr>
+        <tr>
+          <th>8</th>
+          <td>
+            <p class="bad">HKD-USD-44106</p>
+          </td>
+          <td>
+            <p class="good">HKD-USD-20201002</p>
+          </td>
+          <td><p>HKD</p></td>
+          <td><p>USD</p></td>
+          <td><p class="value">02-Oct-2020</p></td>
+          <td><p class="value">0.129028</p></td>
+        </tr>
+      </tbody>
+    </table>
+  </div></div>
+    <script src="prismjs/prism.js"></script>
+  </body>
+</html>

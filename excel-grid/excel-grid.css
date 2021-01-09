@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 0;
 }
 table, th, tr, td {
-  border: 1px solid #89b6a5;
+  border: 1px solid #b3d0c5;
   border-collapse: collapse;
 }
 table p {
@@ -61,14 +61,14 @@ table.text tbody tr td {
   border-top: 1px solid transparent;
 }
 table.text {
-  border: 1px solid #89b6a5; /* shade of 89b6a5 */
+  border: 1px solid #b3d0c5; /* shade of b3d0c5 */
   border-top: none;
 }
 table.text thead th {
   background-color: transparent;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
-  border-bottom: 1px solid #89b6a5; /* shade of 89b6a5 */
+  border-bottom: 1px solid #b3d0c5;
 }
 table tr, table th, table td {
   height: 32px;
@@ -101,9 +101,23 @@ th:not(:first-child) {
 th.small:not(:first-child) {
   min-width: 50px;
 }
+tr.header th, tr.header td {
+  border-bottom: 2px solid #89b6a5;
+}
 
+.bold {
+  font-weight: bold;
+}
 .value {
   text-align: right;
+}
+.good {
+  background-color: #ccffcc;
+  color: #008f00;
+}
+.bad {
+  background-color: #ffcccc;
+  color: #cc0000;
 }
 
 td p {
@@ -127,11 +141,13 @@ td p + code {
   background-color: #4c3b4d;
   padding: 10px 15px;
   margin: 20px 0;
-  font-size: 1.2em;
   color: white;
 }
 .message * {
   color: white;
+}
+.message, .message * {
+  font-size: 18px;
 }
 .message p, .message ol {
   margin: 0;
