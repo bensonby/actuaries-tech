@@ -98,6 +98,9 @@ th {
 th:not(:first-child) {
   min-width: 100px;
 }
+th.wider {
+  min-width: 130px;
+}
 th.small:not(:first-child) {
   min-width: 50px;
 }
@@ -154,6 +157,10 @@ td p + code {
 }
 .justify {
   text-align: justify;
+}
+
+.img-margin {
+  margin-top: 10px;
 }
 
 /* Override default prism coy theme */
