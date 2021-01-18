@@ -166,6 +166,9 @@ td p + code {
   margin-top: 10px;
 }
 
+code.code-small {
+  font-size: 0.8em !important;
+}
 /* Override default prism coy theme */
 code {
   border: none !important;
